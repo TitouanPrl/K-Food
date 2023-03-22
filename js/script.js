@@ -67,57 +67,57 @@ function toggleStock() {
 }
 
 /* Validation des données du form contact */
-/* var dateC = document.getElementById("date_contact");
+var dateC = document.getElementById("date_contact");
 var nom = document.getElementById("nom");
 var prenom = document.getElementById("prenom");
 var email = document.getElementById("mail");
 var dateN = document.getElementById("date_naissance");
 var sujet = document.getElementById("sujet");
 
-dateC.addEventListener("keyup", function (event) {
-    if (dateC.validity.typeMismatch) {
-        dateC.setCustomValidity("Veuillez entrer une date valide");
+dateC.oninvalid = function (e) {
+    if (!e.target.validity.valid) {
+        e.target.setCustomValidity("Veuillez entrer une date valide");
     } else {
-        dateC.setCustomValidity("");
+        e.target.setCustomValidity("");
     }
-});
+};
 
-nom.addEventListener("keyup", function (event) {
-    if (nom.validity.typeMismatch) {
-        nom.setCustomValidity("Veuillez entrer votre nom de famille");
+nom.oninvalid = function (e) {
+    if (!e.validity.valid) {
+        e.target.setCustomValidity("Veuillez entrer votre nom de famille");
     } else {
-        nom.setCustomValidity("");
+        e.target.setCustomValidity("");
     }
-});
+};
 
-prenom.addEventListener("keyup", function (event) {
-    if (prenom.validity.typeMismatch) {
-        prenom.setCustomValidity("Veuillez entrer votre prénom");
+prenom.oninvalid = function (e) {
+    if (!e.target.validity.valid) {
+        e.target.setCustomValidity("Veuillez entrer votre prénom");
     } else {
-        prenom.setCustomValidity("");
+        e.target.setCustomValidity("");
     }
-});
+};
 
-email.addEventListener("keyup", function (event) {
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity("Veuillez rentrer votre email");
+email.oninvalid = function (e) {
+    if (!e.target.validity.valid) {
+        e.target.setCustomValidity("Veuillez rentrer votre email");
     } else {
-        email.setCustomValidity("");
+        e.target.setCustomValidity("");
     }
-});
+};
 
-dateN.addEventListener("keyup", function (event) {
-    if (dateN.validity.typeMismatch) {
-        dateN.setCustomValidity("Veuillez entrer une date de naissance correcte");
+dateN.oninvalid = function (e) {
+    if ((!e.target.validity.valid) {
+        e.target.setCustomValidity("Veuillez entrer une date de naissance correcte");
     } else {
-        dateN.setCustomValidity("");
+        e.target.setCustomValidity("");
     }
-});
+};
 
-sujet.addEventListener("keyup", function (event) {
-    if (sujet.validity.typeMismatch) {
-        sujet.setCustomValidity("Veuillez rentrer ke sujet de votre demande");
+sujet.oninvalid = function (e) {
+    if (!e.target.validity.valid) {
+        e.target.setCustomValidity("Veuillez rentrer le sujet de votre demande");
     } else {
-        sujet.setCustomValidity("");
+        e.target.setCustomValidity("");
     }
-}); */
+};

@@ -145,11 +145,11 @@ input {
 }
 
 #form input:invalid {
-    box-shadow: 0 0 5px 1px red;
+    background-color: lightpink;
 }
 
 #form input:valid {
-    background-color: #42f57e;
+    background-color: palegreen;
 }
 
 #choix_genre input {
@@ -181,13 +181,15 @@ input {
     transition: all 0.2s;
 }
 
+/* Mise en page des box autour des inputs */
+
 fieldset {
     margin: 10px;
     width: 90%;
 
 }
 
-
+/* Définition des deux colonnes du form */
 
 #formG {
     text-align: center;
@@ -217,6 +219,7 @@ label {
     margin-left: 10px;
 }
 
+/* Définition du bloc "contenu de la prise de contact" */
 
 #field_contenu {
     height: 37%;

@@ -46,12 +46,12 @@
 
                         <fieldset>
                             <legend>Nom</legend>
-                            <input type="text" id="nom" name="nom" required> <br>
+                            <input type="text" id="nom" name="nom" required pattern="[A-Z][A-Za-z]+"> <br>
                         </fieldset>
 
                         <fieldset>
                             <legend>Prénom</legend>
-                            <input type="text" id="prenom" name="prenom" required> <br>
+                            <input type="text" id="prenom" name="prenom" required pattern="[A-Z][A-Za-z]+"> <br>
                         </fieldset>
 
                         <fieldset>
@@ -91,12 +91,12 @@
 
                         <fieldset>
                             <legend>Sujet de la demande</legend>
-                            <input type="text" id="sujet" name="sujet" required> <br>
+                            <input type="text" id="sujet" name="sujet" required pattern="[A-Za-z ]+"> <br>
                         </fieldset>
 
                         <fieldset id="field_contenu">
                             <legend>Contenu</legend>
-                            <textarea id="contenu" name="contenu" required></textarea>
+                            <textarea id="contenu" name="contenu" required pattern="[A-Za-z ]+"></textarea>
                         </fieldset>
                     </div>
                 </div>
