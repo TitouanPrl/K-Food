@@ -1,0 +1,90 @@
+/* Fond de la page */
+
+html {
+    background-color: #2C2F33;
+    color: white;
+}
+
+text{
+    color: #2C2F33;
+}
+
+main {
+    padding: 30px;
+}
+
+
+/* Contenu */
+
+table {
+    width: 70%;
+}
+
+table, td {
+    border: 2px solid #382f2f;
+    text-align: center;
+    margin: auto;
+    background-color: #fe4415;
+    color: #382f2f;
+}
+
+td {
+    width: 180px;
+}
+
+thead, tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fe4415;
+    padding: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+img{
+    width: 180px;
+    height: 150px;
+}
+
+
+
+
+/* Template footer header */
+
+header, footer {
+    text-align: center;
+    border: 3px solid #fe4415;
+    padding: 30px;      
+}
+
+#logo{
+    height: 200px;
+    width: 200px;
+    padding-bottom: 30px;
+}
+
+a {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #fe4415;
+    color: #2C2F33;
+    border-radius: 10px;
+
+    width: 20px;
+    height: 20px;
+    font-size: large;
+    text-decoration: none;
+}
+
+/* Lien survolé */
+
+a:hover {
+    color: white;
+}

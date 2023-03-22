@@ -1,0 +1,69 @@
+h2 {
+    text-align: center;
+    background-color: #fe4415;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+p {
+  text-align: center;  
+}
+
+
+/* Template page */
+
+html {
+    background-image: url("../img/food_bg.jpg");
+    background-size: cover;
+    background-color: white;
+}
+
+main {
+    width: 50%;
+    margin: auto;
+    background-color: #2C2F33;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 3px solid #fe4415;
+    color: white;
+}
+
+/* Template header & footer */
+
+header, footer {
+    text-align: center;
+    border: 3px solid #fe4415;
+    padding: 30px;
+    background-color: #2C2F33;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+
+#logo{
+    height: 200px;
+    width: 200px;
+    padding-bottom: 30px;
+}
+
+a {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #fe4415;
+    color: #2C2F33;
+    border-radius: 10px;
+
+    width: 20px;
+    height: 20px;
+    font-size: large;
+    text-decoration: none;
+}
+
+/* Lien survolé */
+
+a:hover {
+    color: white;
+}
+
+/* Corps */
