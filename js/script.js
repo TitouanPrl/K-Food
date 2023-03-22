@@ -76,36 +76,42 @@ var email = document.getElementById("mail");
 var dateN = document.getElementById("date_naissance");
 var sujet = document.getElementById("sujet");
 
+    dateC.setCustomValidity("");
     if (!dateC.validity.valid) {
-        dateC.setCustomValidity("Veuillez entrer une date valide");
+        dateC.setCustomValidity("Veuillez entrer une date valide. Ex : 03/22/2023");
     } else {
         dateC.setCustomValidity("");
     }
 
+    nom.setCustomValidity("");
     if (!nom.validity.valid) {
-        nom.setCustomValidity("Veuillez entrer votre nom de famille");
+        nom.setCustomValidity("Veuillez entrer votre nom de famille. Ex : Pradal");
     } else {
         nom.setCustomValidity("");
     }
 
+    prenom.setCustomValidity("");
     if (!prenom.validity.valid) {
-        prenom.setCustomValidity("Veuillez entrer votre prénom");
+        prenom.setCustomValidity("Veuillez entrer votre prénom. Ex : Titouan");
     } else {
         prenom.setCustomValidity("");
     }
 
+    email.setCustomValidity("");
     if (!email.validity.valid) {
-        email.setCustomValidity("Veuillez rentrer votre email");
+        email.setCustomValidity("Veuillez rentrer votre email. Ex : pradaltito@cy-tech.fr");
     } else {
         email.setCustomValidity("");
     }
 
+    dateN.setCustomValidity("");
     if (!dateN.validity.valid) {
-        dateN.setCustomValidity("Veuillez entrer une date de naissance correcte");
+        dateN.setCustomValidity("Veuillez entrer une date de naissance correcte. Ex : 08/07/2002");
     } else {
         dateN.setCustomValidity("");
     }
 
+    sujet.setCustomValidity("");
     if (!sujet.validity.valid) {
         sujet.setCustomValidity("Veuillez rentrer le sujet de votre demande");
     } else {
