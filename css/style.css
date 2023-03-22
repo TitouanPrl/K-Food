@@ -12,34 +12,236 @@ h3 {
 }
 
 p {
-  text-align: center;  
+    text-align: center;
 }
 
-img{
+img {
     width: 180px;
     height: 150px;
 }
 
+/* Mise en forme tableau */
+
 table {
-    width: 70%;
+    width: 80%;
 }
 
-table, td {
+table,
+td {
     border: 2px solid #382f2f;
     text-align: center;
     margin: auto;
     background-color: #fe4415;
-    color: #382f2f;
+    color: white;
+}
+
+td .stock {
+    margin-bottom: -20%;
 }
 
 td {
-    width: 180px;
+    width: 25%;
+    background-color: #2C2F33;
 }
 
-thead, tfoot {
+thead,
+tfoot {
     background-color: #333;
     color: #fff;
 }
+
+/* On empêhce l'étirement des box de dialogues */
+textarea {
+    resize: none;
+}
+
+/* Bouton des stocks */
+
+#but_stock {
+    margin-top: 2%;
+    margin-left: 38.5%;
+    text-align: center;
+
+    background-color: #fe4415;
+    color: #2C2F33;
+    border-radius: 10px;
+    font-size: large;
+    text-decoration: none;
+    border: 3px solid #2C2F33;
+    padding: 10px;
+
+    transition: all 0.2s;
+
+    display: block;
+}
+
+#but_stock:hover {
+    color: #fff;
+    border: 3px solid #fff;
+    transition: all 0.2s;
+}
+
+/* Compteur */
+
+.compteur {
+    display: inline-block;
+    display: flex;
+    margin: 10px;
+
+}
+
+.compteur button {
+    width: 25%;
+    text-align: center;
+    background-color: #2C2F33;
+    color: #fe4415;
+    border-radius: 10px;
+    font-size: large;
+    text-decoration: none;
+    border: 2px solid #fff;
+}
+
+.compteur button:hover {
+    color: white;
+}
+
+.moins {
+    visibility: hidden;
+}
+
+.plus {
+    visibility: visible;
+}
+
+
+.AffCompteur {
+    width: 50%;
+    background-color: #2C2F33;
+    color: #fe4415;
+    border-radius: 10px;
+    font-size: large;
+    text-decoration: none;
+    border: 2px solid #fff;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Mise en page du formulaire */
+
+#form {
+    display: inline-block;
+    display: flex;
+    height: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+
+input {
+    width: 70%;
+}
+
+#form input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+#form input:valid {
+    background-color: #42f57e;
+}
+
+#choix_genre input {
+    width: auto;
+}
+
+/* Mise en page du bouton Envoyer dans le formulaire */
+
+#submit {
+    width: 10%;
+    margin-top: 3%;
+    margin-left: 45%;
+    text-align: center;
+
+    background-color: #fe4415;
+    color: #2C2F33;
+    border-radius: 10px;
+    font-size: large;
+    text-decoration: none;
+    border: 3px solid #2C2F33;
+    padding: 10px;
+
+    transition: all 0.2s;
+}
+
+#submit:hover {
+    color: #fff;
+    border: 3px solid #fff;
+    transition: all 0.2s;
+}
+
+fieldset {
+    margin: 10px;
+    width: 90%;
+
+}
+
+
+
+#formG {
+    text-align: center;
+    border: 3px solid #fe4415;
+    padding: 30px;
+    background-color: #2C2F33;
+    color: white;
+    width: 50%;
+    float: left;
+}
+
+#formD {
+    text-align: center;
+    border: 3px solid #fe4415;
+    padding: 30px;
+    background-color: #2C2F33;
+    color: white;
+    width: 50%;
+    float: right;
+}
+
+.genre {
+    float: left;
+}
+
+label {
+    margin-left: 10px;
+}
+
+
+#field_contenu {
+    height: 37%;
+}
+
+#contenu {
+    height: 90%;
+    width: 70%;
+    resize: none;
+}
+
+/* Zoom image */
+
+.img_produit {
+    transition: all 0.2s;
+    border: 3px solid #fe4415;
+}
+
+.img_produit:hover {
+    scale: 200%;
+    border: 3px solid #fe4415;
+    border-radius: 5%;
+
+    transition: all 0.2s;
+}
+
 
 /* Template page */
 
@@ -47,12 +249,14 @@ html {
     background-image: url("../img/food_bg.jpg");
     background-size: cover;
     background-color: white;
-    background-attachment: fixed;   /* Permet de garder le fond écran fixe quand on défile la page */
+    background-attachment: fixed;
+
+    /* Permet de garder le fond écran fixe quand on défile la page */
     background-repeat: no-repeat;
 }
 
 main {
-    width: 50%;
+    width: 60%;
     margin: auto;
     background-color: #2C2F33;
     padding: 30px;
@@ -62,19 +266,28 @@ main {
     color: white;
 }
 
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
 /* Template header & footer */
 
-header, footer {
+header,
+footer {
     text-align: center;
     border: 3px solid #fe4415;
     padding: 30px;
     background-color: #2C2F33;
     color: white;
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 
-#logo{
+#logo {
     height: 200px;
     width: 200px;
     padding-bottom: 30px;
@@ -91,10 +304,14 @@ a {
     height: 20px;
     font-size: large;
     text-decoration: none;
+
+    transition: all 0.2s;
 }
 
 /* Lien survolé */
 
 a:hover {
     color: white;
+
+    transition: all 0.2s;
 }

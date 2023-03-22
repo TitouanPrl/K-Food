@@ -8,6 +8,8 @@
     <title>K-Food</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js"></script>
+
 </head>
 
 <body>
@@ -15,6 +17,8 @@
 
     <header>
         <h1>WELCOME TO K-FOOD</h1>
+
+        <img id="logo" src="../img/korean_food.png" alt="logo">
 
         <nav>
             <a href="index.html">Accueil</a>
@@ -30,24 +34,76 @@
 
     <main>
         <article>
-            <h2>Vous avez prévu un semestre en Corée :^) ?
-                <br> Ce site va ravir vos papilles !
-            </h2>
+            <h2>Demande de contact</h2>
+            <form>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2">The table header</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>The table body</td>
-                        <td>with two columns</td>
-                    </tr>
-                </tbody>
-            </table>
-            
+                <div id="form">
+                    <div id="formG">
+                        <fieldset>
+                            <legend>Date du contact</legend>
+                            <input type="date" id="date_contact" name="date_contact" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Nom</legend>
+                            <input type="text" id="nom" name="nom" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Prénom</legend>
+                            <input type="text" id="prenom" name="prenom" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Mail</legend>
+                            <input type="email" id="mail" name="mail" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Choisissez votre genre</legend>
+                            <div id="choix_genre">
+                                <input type="radio" class="genre" name="genre" value="Homme">
+                                <label class="genre" for="homme">Homme</label><br>
+                                <input type="radio" class="genre" name="genre" value="Femme">
+                                <label class="genre" for="femme">Femme</label><br>
+                                <input type="radio" class="genre" name="genre" value="Autre">
+                                <label class="genre" for="autre">Autre</label> <br>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div id="formD">
+
+                        <fieldset>
+                            <legend>Date de naissance</legend>
+                            <input type="date" id="date_naissance" name="date_naissance" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Qui êtes vous ?</legend>
+                            <select name="fonction" id="fonction" required>
+                                <option value="">--Choisissez votre état--</option>
+                                <option value="touriste">Touriste</option>
+                                <option value="local">Local</option>
+                            </select>
+                            <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Sujet de la demande</legend>
+                            <input type="text" id="sujet" name="sujet" required> <br>
+                        </fieldset>
+
+                        <fieldset id="field_contenu">
+                            <legend>Contenu</legend>
+                            <textarea id="contenu" name="contenu" required></textarea>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <input type="submit" id="submit" value="Envoyer">
+
+            </form>
         </article>
     </main>
 
