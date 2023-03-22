@@ -67,6 +67,8 @@ function toggleStock() {
 }
 
 /* Validation des données du form contact */
+function valider() {
+    
 var dateC = document.getElementById("date_contact");
 var nom = document.getElementById("nom");
 var prenom = document.getElementById("prenom");
@@ -74,50 +76,40 @@ var email = document.getElementById("mail");
 var dateN = document.getElementById("date_naissance");
 var sujet = document.getElementById("sujet");
 
-dateC.oninvalid = function (e) {
-    if (!e.target.validity.valid) {
-        e.target.setCustomValidity("Veuillez entrer une date valide");
+    if (!dateC.validity.valid) {
+        dateC.setCustomValidity("Veuillez entrer une date valide");
     } else {
-        e.target.setCustomValidity("");
+        dateC.setCustomValidity("");
     }
-};
 
-nom.oninvalid = function (e) {
-    if (!e.validity.valid) {
-        e.target.setCustomValidity("Veuillez entrer votre nom de famille");
+    if (!nom.validity.valid) {
+        nom.setCustomValidity("Veuillez entrer votre nom de famille");
     } else {
-        e.target.setCustomValidity("");
+        nom.setCustomValidity("");
     }
-};
 
-prenom.oninvalid = function (e) {
-    if (!e.target.validity.valid) {
-        e.target.setCustomValidity("Veuillez entrer votre prénom");
+    if (!prenom.validity.valid) {
+        prenom.setCustomValidity("Veuillez entrer votre prénom");
     } else {
-        e.target.setCustomValidity("");
+        prenom.setCustomValidity("");
     }
-};
 
-email.oninvalid = function (e) {
-    if (!e.target.validity.valid) {
-        e.target.setCustomValidity("Veuillez rentrer votre email");
+    if (!email.validity.valid) {
+        email.setCustomValidity("Veuillez rentrer votre email");
     } else {
-        e.target.setCustomValidity("");
+        email.setCustomValidity("");
     }
-};
 
-dateN.oninvalid = function (e) {
-    if ((!e.target.validity.valid) {
-        e.target.setCustomValidity("Veuillez entrer une date de naissance correcte");
+    if (!dateN.validity.valid) {
+        dateN.setCustomValidity("Veuillez entrer une date de naissance correcte");
     } else {
-        e.target.setCustomValidity("");
+        dateN.setCustomValidity("");
     }
-};
 
-sujet.oninvalid = function (e) {
-    if (!e.target.validity.valid) {
-        e.target.setCustomValidity("Veuillez rentrer le sujet de votre demande");
+    if (!sujet.validity.valid) {
+        sujet.setCustomValidity("Veuillez rentrer le sujet de votre demande");
     } else {
-        e.target.setCustomValidity("");
+        sujet.setCustomValidity("");
     }
-};
+
+}
