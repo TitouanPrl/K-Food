@@ -57,10 +57,10 @@ function toggleStock() {
 
     /* On applique la propriété pour chaque élément de la classe stock */
     for (let elmt of document.querySelectorAll('.stock')) {
-        if (getComputedStyle(elmt).display != "none") {
-            elmt.style.display = "none";
+        if (getComputedStyle(elmt).visibility != "hidden") {
+            elmt.style.visibility = "hidden";
         } else {
-            elmt.style.display = "block";
+            elmt.style.visibility = "visible";
         }
     }
 

@@ -37,6 +37,7 @@ td {
 
 td .stock {
     margin-bottom: -20%;
+    visibility: hidden;
 }
 
 td {
