@@ -6,3 +6,5 @@
 </body>
 
 </html>
+
+<?php fclose($f);   // fermeture du fichier ?>

@@ -12,7 +12,9 @@ session_start();
     <title>K-Food</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/korean_food.png">
     <script src="../js/script.js"></script>
+    
 
 </head>
 
@@ -26,9 +28,9 @@ session_start();
 
         <nav>
             <a href="index.php">Accueil</a>
-            <a href="plat.php">Plats</a>
-            <a href="dessert.php">Desserts</a>
-            <a href="resto.php">Restaurants populaires</a>
+            <a href="categories.php?cat=plat">Plats</a>
+            <a href="categories.php?cat=dessert">Desserts</a>
+            <a href="categories.php?cat=resto">Restaurants populaires</a>
             <a href="contact.php">Nous contacter</a>
         </nav>
 

@@ -5,7 +5,7 @@
     <main>
         <article>
             <h2>Demande de contact</h2>
-            <form>
+            <form method="POST">
 
                 <div id="form">
                     <div id="formG">
@@ -76,6 +76,10 @@
             </form>
         </article>
     </main>
+
+    <!-- Validaiton données côté serveur -->
+
+    <?php require 'validationDonnee.php'; ?>
 
     <!-- FOOTER -->
 
