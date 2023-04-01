@@ -72,7 +72,7 @@
     /* Si elles le sont, on envoie un mail avec un récap */
     if ($valide = true) {
         mail(
-            'random@gmail.com',         /* Destinataire */
+            'pradaltito@cy-tech.fr',         /* Destinataire */
             'Résumé de votre demande de contact',       /* Sujet du mail */
             'Date de la demande : ' + $date_contact + '\r\n'
             + 'Nom : ' + $nom + '\r\n'
