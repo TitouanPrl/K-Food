@@ -1,0 +1,30 @@
+{
+    "userList": [
+
+        {
+            "userLogin": "Titouan",
+            "userMdp": "19",
+            "connect": "false"
+        },
+
+        {
+            "userLogin": "Achille",
+            "userMdp": "Coree",
+            "connect": "false"
+        },
+
+        {
+            "userLogin": "Paularis",
+            "userMdp": "Paularis",
+            "connect": "false"
+        },
+
+        {
+            "userLogin": "Yan",
+            "userMdp": "Coupole",
+            "connect": "false"
+        }
+
+    ]
+
+}
