@@ -12,41 +12,50 @@ if (!isset($_SESSION["login"])){
 }
 
 //PARTIE VERIFICATION IDENTITE
-$linkFile = "../infos/user.json";
-$file = fopen("../infos/user.json", "r");
-$verif = false;
+$file = "../infos/user.json";
+
+/* On met le contenu du fichier dans une chaine */
+$data = file_get_contents($file);
+
+/* On le décode */
+$obj = json_decode($data);
 
 
-if (!filesize($linkFile)) {     /* Si un fichier n'existe pas on renvoit une erreur */
+/* Si un fichier n'existe pas on renvoit une erreur */
+if (!filesize($file)) {     
   echo "Le fichier user n'existe pas";
-  fclose($file);
 }
+
+/* Sinon on vérifie que l'utilisateur existe dans le fichier */
 else {
-  /* On vérifie que l'utilisateur existe dans le fichier */
-  while ((($data = fgetcsv($file, 1000, ";")) != FALSE) && !$verif) {
+  foreach($obj['user'] as $current) {
 
     /* On écrit les var dans la session */
-    $_SESSION['prenom'] = $data[0];
-    $_SESSION['nom'] = $data[1];
-    $_SESSION['pp'] = $data[2];
-    $_SESSION['date'] = $data[3];
-    $_SESSION['adresse'] = $data[4];
-    $_SESSION['num'] = $data[5];
-    $_SESSION['login1'] = $data[6];
-    $_SESSION['mdp1'] = $data[7];
+    $_SESSION['login1'] = $current['userLogin'];
+    $_SESSION['mdp1'] = $current['userMdp'];
 
+    /* Si les infos de connexion correspondent on redirige vers l'accueil */
     if ($_SESSION['login'] == $_SESSION['login1'] && $_SESSION['mdp'] == $_SESSION['mdp1']){
-      $verif = true;
-      header('Location: index.php'); /* Si les infos de connexion correspondent on redirige vers l'accueil */
+      header('Location: index.php'); 
 
       exit();
     }
   }
-  fclose($file);
 
-  echo "Le login ou le mot de passe est incorrect";   /* On affiche une erreur si les données de connexions ne correspondent pas */
+  /* On affiche une erreur si les données de connexions ne correspondent pas */
+  echo "Le login ou le mot de passe est incorrect";   
   header('Location: connexion.php');
 
 }
+
+/*
+// chemin d'accès à votre fichier JSON
+$file = 'file.json'; 
+// mettre le contenu du fichier dans une variable
+$data = file_get_contents($file); 
+// décoder le flux JSON
+$obj = json_decode($data); 
+// accéder à l'élément approprié
+echo $obj[0]->name;*/
 
   ?>
