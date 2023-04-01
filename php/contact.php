@@ -77,7 +77,7 @@
         </article>
     </main>
 
-    <!-- Validaiton données côté serveur -->
+    <!-- Validation données côté serveur -->
 
     <?php require 'validationDonnee.php'; ?>
 

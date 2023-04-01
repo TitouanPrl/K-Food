@@ -69,6 +69,23 @@
         require "'contact.php?date_contact='$date_contact'?nom='$nom'?prenom='$prenom'?mail='$mail'?genre='$genre'?date_naissance='$date_naissance'?fonction='$fonction'?sujet='$sujet'?contenu='$contenu'";
     }
 
+    /* Si elles le sont, on envoie un mail avec un récap */
+    if ($valide = true) {
+        mail(
+            'random@gmail.com',         /* Destinataire */
+            'Résumé de votre demande de contact',       /* Sujet du mail */
+            'Date de la demande : ' + $date_contact + '\r\n'
+            + 'Nom : ' + $nom + '\r\n'
+            + 'Prénom : ' + $prenom + '\r\n'
+            + 'Mail : ' + $mail + '\r\n'
+            + 'Genre : ' + $genre + '\r\n'
+            + 'Date de naissance : ' + $date_naissance + '\r\n'
+            + 'Fonction : ' + $fonction + '\r\n'
+            + 'Sujet de la demande : ' + $sujet + '\r\n'
+            + 'Contenu de la demande : ' + $contenu + '\r\n'
+        );
+    }
+
     /* On ouvre le fichier en écriture */
     $fic = "varSession.inc.php";
     $f = fopen($fic, "a+"); 
