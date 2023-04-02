@@ -43,7 +43,7 @@ else {
       //fwrite($updFile, json_encode($obj));
       //fclose($file);
 
-      header('Location: index.php'); 
+      header('Location: accueil.php'); 
 
       exit();
     }

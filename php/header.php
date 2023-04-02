@@ -27,7 +27,7 @@ session_start();
         <img id="logo" src="../img/korean_food.png" alt="logo">
 
         <nav>
-            <a href="index.php">Accueil</a>
+            <a href="accueil.php">Accueil</a>
             <a href="categories.php?cat=plat">Plats</a>
             <a href="categories.php?cat=dessert">Desserts</a>
             <a href="categories.php?cat=resto">Restaurants populaires</a>
