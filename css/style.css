@@ -246,7 +246,27 @@ label {
     transition: all 0.2s;
 }
 
-/* Mise en forme de la page de connexion */
+/* Mise en forme du bouton de déconnexion */
+#deco {
+    width: 10%;
+    padding: 10px;
+
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+    background-color: #2C2F33;
+
+    border-radius: 10px;    
+    border: 1px solid #fe4415;
+    
+    transition: all 0.2s;
+}
+
+#deco:hover {
+    border: 1px solid #fff;
+    transition: all 0.2s;
+}
 
 
 /* Template page */

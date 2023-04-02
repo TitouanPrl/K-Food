@@ -1,12 +1,4 @@
-<?php require 'header.php'; 
-
-/* On vérifie qu'un mdp a bien été rentré (évite qu'on dodge la page de connexion) */
-if (!isset($_SESSION["login"])){
-    header('Location:connexion.php');
-    exit();
-}
-
-?>
+<?php require 'header.php'; ?>
 
 
 
