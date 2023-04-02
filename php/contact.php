@@ -1,11 +1,21 @@
-<?php require 'header.php'; ?>
+<?php require 'header.php'; 
+
+/* On vérifie qu'un mdp a bien été rentré (évite qu'on dodge la page de connexion) */
+if (!isset($_SESSION["login"])){
+    header('Location:connexion.php');
+    exit();
+}
+
+?>
+
+
 
     <!-- MAIN CONTENT -->
 
     <main>
         <article>
             <h2>Demande de contact</h2>
-            <form method="POST">
+            <form action="validationDonnee.php" method="POST">
 
                 <div id="form">
                     <div id="formG">
@@ -71,7 +81,7 @@
                     </div>
                 </div>
 
-                <input type="submit" id="submit" value="Envoyer" onclick="valider()">
+                <input type="submit" id="submit" value="Envoyer">
 
             </form>
         </article>

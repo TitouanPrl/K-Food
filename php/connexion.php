@@ -1,17 +1,65 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Connexion</title>
-    </head>
-    <body>
-      <form id="monForm" name="monForm" action="verifConnexion.php" method="POST">
-        <fieldset>
-          <legend>Connexion</legend>
-          <label>Login</label> <input type="text" id="nom" name="login" required="required"> <br>
-          <label>Mot de passe</label> <input type="password" id="mdp" name="mdp" required="required"> <br>
-        </fieldset>
-        <input type="submit" id="submit" name="submit" value="Valider">
-       </form>
-    </body>
-</html>
+<html lang="FR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>K-Food</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" type="image/png" href="../img/korean_food.png">
+  <script src="../js/script.js"></script>
+
+
+</head>
+
+<body>
+  <!-- HEADER -->
+
+  <header>
+    <h1>WELCOME TO K-FOOD</h1>
+
+    <img id="logo" src="../img/korean_food.png" alt="logo">
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+
+  <main>
+    <article>
+      <h2>Connexion</h2>
+
+      <form action="verifConnexion.php" method="POST">
+
+        <div id="form">
+
+          <div id="formG">
+            <fieldset>
+              <legend>Login</legend>
+              <input type="text" id="login" name="login" required> <br>
+            </fieldset>
+
+          </div>
+
+          <div id="formD">
+
+            <fieldset>
+              <legend>Mot de passe</legend>
+              <input type="password" id="mdp" name="mdp" required> <br>
+            </fieldset>
+
+          </div>
+        </div>
+
+        <input type="submit" id="submit" value="Valider">
+
+      </form>
+    </article>
+  </main>
+
+  <?php require 'footer.php'; ?>
