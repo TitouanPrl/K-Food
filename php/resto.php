@@ -6,7 +6,7 @@
         <article>
             <h2>Découvrez où vous remplir la panse</h2>
 
-            <table>
+            <table class="cat_tab">
                 <thead>
                     <tr>
                         <th colspan="4">5 restaurants à Séoul</th>

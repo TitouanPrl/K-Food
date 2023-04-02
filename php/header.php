@@ -33,7 +33,7 @@ if (!isset($_SESSION["login"])){
 
         <img id="logo" src="../img/korean_food.png" alt="logo">
 
-        <nav>
+        <nav id="liens">
             <a href="accueil.php">Accueil</a>
             <a href="categories.php?cat=plat">Plats</a>
             <a href="categories.php?cat=dessert">Desserts</a>

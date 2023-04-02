@@ -6,7 +6,7 @@
         <article>
             <h2>De quoi ravir son palais et son diabète</h2>
 
-            <table>
+            <table class="cat_tab">
                 <thead>
                     <tr>
                         <th colspan="4">5 desserts typiques</th>

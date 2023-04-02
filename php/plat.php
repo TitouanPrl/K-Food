@@ -6,7 +6,7 @@
         <article>
             <h2>Un régime délicieux</h2>
 
-            <table>
+            <table class="cat_tab">
                 <thead>
                     <tr>
                         <th colspan="4">5 plats typiques</th>
