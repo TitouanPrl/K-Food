@@ -15,7 +15,7 @@
                 <tbody>
                     <tr>
                         <td><img class="img_produit" src="../img/Bibimbap.jpg" alt="Gyeongdan"></td>
-                        <td><strong>Bibimbap</strong>
+                        <td><b>Bibimbap</b>
                             <br> Tout simplement du riz, qui est mélangé la plupart du temps avec des légumes et de la viande
                         </td>
                         <td>10€
@@ -32,8 +32,8 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Naengmyeon.png" alt="Gyeongdan"></td>
-                        <td><strong>Naengmyeon</strong>
+                        <td><img class="img_produit" src="../img/Naengmyeon.png" alt="Naengmyeon"></td>
+                        <td><b>Naengmyeon</b>
                             <br> Le naengmyeon est cuisiné à base de nouilles servies froides !
                         </td>
                         <td>5€
@@ -50,8 +50,8 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Kimchi Jjigae.jpg" alt="Gyeongdan"></td>
-                        <td><strong>Kimchi Jjigae</strong>
+                        <td><img class="img_produit" src="../img/Kimchi Jjigae.jpg" alt="Kimchi Jjigae"></td>
+                        <td><b>Kimchi Jjigae</b>
                             <br> Vous pouvez trouver à l’intérieur de ce plat de la viande, des fruits de mer, du tofu, des oignons ou encore de la pâte de haricots fermentés
                         </td>
                         <td>8€
@@ -68,8 +68,8 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Kimbap.jpg" alt="Gyeongdan"></td>
-                        <td><strong>Kimbap</strong>
+                        <td><img class="img_produit" src="../img/Kimbap.jpg" alt="Kimbap"></td>
+                        <td><b>Kimbap</b>
                             <br> On retrouve du riz roulé dans une feuille d'algue séchée, avec en son centre de la garniture (produits cuits/légumes)
                         </td>
                         <td>15€
@@ -86,8 +86,8 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Mandu.jpg" alt="Gyeongdan"></td>
-                        <td><strong>Mandu</strong>
+                        <td><img class="img_produit" src="../img/Mandu.jpg" alt="Mandu"></td>
+                        <td><b>Mandu</b>
                             <br> Les mandu sont en fait des ravioles coréennes
                         </td>
                         <td>7€

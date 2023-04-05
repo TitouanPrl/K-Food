@@ -1,0 +1,119 @@
+{
+    "plat": [
+
+        {
+            "img": "../img/Bibimbap.jpg",
+            "nom_et_desc": "<b>Bibimbap</b> <br> Tout simplement du riz, qui est mélangé la plupart du temps avec des légumes et de la viande",
+            "prix": "10€",
+            "stock": "669"
+        },
+
+        {
+            "img": "../img/Naengmyeon.png",
+            "nom_et_desc": "<b>Naengmyeon</b> <br> Le naengmyeon est cuisiné à base de nouilles servies froides !",
+            "prix": "5€",
+            "stock": "63"
+        },
+
+        {
+            "img": "../img/Kimchi Jjigae.jpg",
+            "nom_et_desc": "<b>Kimchi Jjigae</b> <br> Vous pouvez trouver à l’intérieur de ce plat de la viande, des fruits de mer, du tofu, des oignons ou encore de la pâte de haricots fermentés",
+            "prix": "8€",
+            "stock": "69"
+        },
+
+        {
+            "img": "../img/Kimbap.jpg",
+            "nom_et_desc": "<b>Kimbap</b> <br> On retrouve du riz roulé dans une feuille d'algue séchée, avec en son centre de la garniture (produits cuits/légumes)",
+            "prix": "15€",
+            "stock": "78"
+        },
+
+        {
+            "img": "../img/Mandu.jpg",
+            "nom_et_desc": "<b>Mandu</b> <br> Les mandu sont en fait des ravioles coréennes",
+            "prix": "7€",
+            "stock": "89"
+        }
+
+    ],
+
+    "dessert": [
+
+        {
+            "img": "../img/Gyeongdan.jpg",
+            "nom_et_desc": "Gyeongdan",
+            "prix": "15€",
+            "stock": "6"
+        },
+
+        {
+            "img": "../img/Hotteok.jpeg",
+            "nom_et_desc": "Hotteok",
+            "prix": "10€",
+            "stock": "14"
+        },
+
+        {
+            "img": "../img/hodu-gwaja.jpg",
+            "nom_et_desc": "Hodou gwaja",
+            "prix": "7€",
+            "stock": "63"
+        },
+
+        {
+            "img": "../img/Gogumattang.jpg",
+            "nom_et_desc": "Gogumattang",
+            "prix": "10€",
+            "stock": "52"
+        },
+
+        {
+            "img": "../img/Hwajeon.jpg",
+            "nom_et_desc": "Hwajeon",
+            "prix": "7€",
+            "stock": "43"
+        }
+
+    ],
+
+    "resto": [
+
+        {
+            "img": "../img/Flavors.jpg",
+            "nom_et_desc": "<b>Flavors</b> <br> Fruits de mer & Poisson / Asiatique / Coréenne",
+            "prix": "47€ à 112€",
+            "stock": "142"
+        },
+
+        {
+            "img": "../img/Jangseng Geongangwon.jpg",
+            "nom_et_desc": "<b>Jangseng Geongangwon</b> <br> Coréenne",
+            "prix": "11€ à 728€",
+            "stock": "14"
+        },
+
+        {
+            "img": "../img/853.jpg",
+            "nom_et_desc": "<b>853</b> <br> Barbecue / Grillades / Asiatique / Coréenne",
+            "prix": "11€ à 22€",
+            "stock": "68"
+        },
+
+        {
+            "img": "../img/Jihwaja.jpg",
+            "nom_et_desc": "<b>Jihwaja</b> <br> Coréenne / Végétariens bienvenus /Choix végétaliens",
+            "prix": "69€ à 142€",
+            "stock": "6"
+        },
+
+        {
+            "img": "../img/Jungsik.jpg",
+            "nom_et_desc": "<b>Jungsik</b <br> Asiatique / Coréenne / Végétariens bienvenus",
+            "prix": "47€ à 140€",
+            "stock": "57"
+        }
+
+    ]
+
+}

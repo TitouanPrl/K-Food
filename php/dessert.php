@@ -30,7 +30,7 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Hotteok.jpeg" alt="Gyeongdan"></td>
+                        <td><img class="img_produit" src="../img/Hotteok.jpeg" alt="Hotteok"></td>
                         <td>Hotteok</td>
                         <td>10€
                             <p class ="stock"><i>Stock : <span class="nb_stock">14</span></i></p>
@@ -46,7 +46,7 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/hodu-gwaja.jpg" alt="Gyeongdan"></td>
+                        <td><img class="img_produit" src="../img/hodu-gwaja.jpg" alt="hodu-gwaja"></td>
                         <td>Hodou gwaja</td>
                         <td>7€
                             <p class ="stock"><i>Stock : <span class="nb_stock">63</span></i></p>
@@ -62,7 +62,7 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Gogumattang.jpg" alt="Gyeongdan"></td>
+                        <td><img class="img_produit" src="../img/Gogumattang.jpg" alt="Gogumattang"></td>
                         <td>Gogumattang</td>
                         <td>10€
                             <p class ="stock"><i>Stock : <span class="nb_stock">52</span></i></p>
@@ -78,7 +78,7 @@
                     </tr>
 
                     <tr>
-                        <td><img class="img_produit" src="../img/Hwajeon.jpg" alt="Gyeongdan"></td>
+                        <td><img class="img_produit" src="../img/Hwajeon.jpg" alt="Hwajeon"></td>
                         <td>Hwajeon</td>
                         <td>7€
                             <p class ="stock"><i>Stock : <span class="nb_stock">43</span></i></p>

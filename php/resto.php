@@ -15,7 +15,7 @@
                 <tbody>
                     <tr>
                         <td><img class="img_produit" src="../img/Flavors.jpg" alt="Gyeongdan"></td>
-                        <td><strong>Flavors</strong>
+                        <td><b>Flavors</b>
                             <br> Fruits de mer & Poisson / Asiatique / Coréenne
                         </td>
                         <td>47€ à 112€
@@ -34,8 +34,7 @@
                     <tr>
                         <td><img class="img_produit" src="../img/Jangseng Geongangwon.jpg" alt="Jangseng Geongangwon
                             "></td>
-                        <td><strong>Jangseng Geongangwon
-                        </strong>
+                        <td><b>Jangseng Geongangwon</b>
                             <br> Coréenne
                         </td>
                         <td>11€ à 728€
@@ -53,7 +52,7 @@
 
                     <tr>
                         <td><img class="img_produit" src="../img/853.jpg" alt="853"></td>
-                        <td><strong>853</strong>
+                        <td><b>853</b>
                             <br> Barbecue / Grillades / Asiatique / Coréenne
                         </td>
                         <td>11€ à 22€
@@ -71,7 +70,7 @@
 
                     <tr>
                         <td><img class="img_produit" src="../img/Jihwaja.jpg" alt="Jihwaja"></td>
-                        <td><strong>Jihwaja</strong>
+                        <td><b>Jihwaja</b>
                             <br> Coréenne / Végétariens bienvenus /Choix végétaliens
                         <td>69€ à 142€
                             <p class ="stock"><i>Stock : <span class="nb_stock">6</span></i></p>
@@ -88,7 +87,7 @@
 
                     <tr>
                         <td><img class="img_produit" src="../img/Jungsik.jpg" alt="Jungsik"></td>
-                        <td><strong>Jungsik</strong>
+                        <td><b>Jungsik</b>
                             <br> Asiatique / Coréenne / Végétariens bienvenus
                         </td>
                         <td>47€ à 140€
