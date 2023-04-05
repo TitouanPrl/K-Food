@@ -21,9 +21,10 @@ $data = file_get_contents($file);
 $obj = json_decode($data,true);
 
 
-/* Si un fichier n'existe pas on renvoit une erreur */
+/* Si le fichier n'existe pas on renvoit une erreur */
 if (!filesize($file)) {     
   echo "Le fichier user n'existe pas";
+  exit();
 }
 
 /* Sinon on vérifie que l'utilisateur existe dans le fichier */
