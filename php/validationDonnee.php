@@ -86,12 +86,4 @@
         );
     }
 
-    /* On ouvre le fichier en écriture */
-    $fic = "varSession.inc.php";
-    $f = fopen($fic, "a+"); 
-
-    /* Ecriture des données */
-    fwrite($f, 'Date de contact :')
-
-
 ?>

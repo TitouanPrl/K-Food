@@ -24,7 +24,7 @@ if (!filesize($file)) {
     exit();
 }
 
-/* Affichage des en-têtes */
+/* Affichage de l'en-tête*/
 switch ($cat) {
     case 'plat':
         echo ('<!-- MAIN CONTENT -->
@@ -106,6 +106,7 @@ foreach ($obj[$cat] as $current) {
     $i++;
 }
 
+/* Affichage du bouton pour cacher les stocks */
 echo ('</tbody>
         </table>
 
