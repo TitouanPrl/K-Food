@@ -8,7 +8,7 @@
 ***
 Pour lancer le serveur :
 ```sh   
-php -S localhost:8080
+"php -S localhost:8080" dans le dossier src/ une fois l'archive extraite
 ```
 
 #### Ouvrir le site
