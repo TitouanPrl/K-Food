@@ -4,7 +4,6 @@ function addCpt(tmp) {
     var butP = document.getElementsByClassName("plus")[tmp];
     var butM = document.getElementsByClassName("moins")[tmp];
     var max = document.getElementsByClassName("nb_stock")[tmp].textContent;
-console.log(max);
 
     if (cpt < max) {
     document.getElementsByClassName("AffCompteur")[tmp].textContent++;
@@ -27,8 +26,6 @@ function suprCpt(tmp) {
     var butM = document.getElementsByClassName("moins")[tmp];
     var max = document.getElementsByClassName("nb_stock")[tmp].textContent;
 
-    console.log(max);
-
 
     if (cpt > 0) {
         document.getElementsByClassName("AffCompteur")[tmp].textContent--;
@@ -45,8 +42,21 @@ function suprCpt(tmp) {
 }
 
 /* Ajoute un produit au panier */
-function ajouter() {
+function ajouter(cat, i) {
+    /* Cas où on a un plat */
+    if (cat == "plat") {
+        
+    }
 
+    /* Cas où on a un dessert */
+    else if (cat == "dessert") {
+        
+    }
+
+    /* Cas où on a un resto */
+    else if (cat == "resto") {
+        
+    }
 }
 
 /* Affiche ou masque les stocks */
