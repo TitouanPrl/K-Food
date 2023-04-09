@@ -82,35 +82,35 @@
         {
             "img": "../img/Flavors.jpg",
             "nom_et_desc": "<b>Flavors</b> <br> Fruits de mer & Poisson / Asiatique / Coréenne",
-            "prix": "47€ à 112€",
+            "prix": "47€",
             "stock": "142"
         },
 
         {
             "img": "../img/Jangseng Geongangwon.jpg",
             "nom_et_desc": "<b>Jangseng Geongangwon</b> <br> Coréenne",
-            "prix": "11€ à 728€",
+            "prix": "11€",
             "stock": "14"
         },
 
         {
             "img": "../img/853.jpg",
             "nom_et_desc": "<b>853</b> <br> Barbecue / Grillades / Asiatique / Coréenne",
-            "prix": "11€ à 22€",
+            "prix": "11€",
             "stock": "68"
         },
 
         {
             "img": "../img/Jihwaja.jpg",
             "nom_et_desc": "<b>Jihwaja</b> <br> Coréenne / Végétariens bienvenus /Choix végétaliens",
-            "prix": "69€ à 142€",
+            "prix": "69€",
             "stock": "6"
         },
 
         {
             "img": "../img/Jungsik.jpg",
             "nom_et_desc": "<b>Jungsik</b <br> Asiatique / Coréenne / Végétariens bienvenus",
-            "prix": "47€ à 140€",
+            "prix": "47€",
             "stock": "57"
         }
 

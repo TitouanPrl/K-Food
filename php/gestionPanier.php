@@ -5,81 +5,81 @@
         "plat" => array(
             "Bibimbap" => array(
                 "prix" => "10€",
-                "stock" => "669",
+                "stock" => "0",
             ),
 
             "Naengmyeon" => array(
                 "prix" => "5€",
-                "stock" => "63",
+                "stock" => "0",
             ),
 
             "Kimchi Jjigae" => array(
                 "prix" => "8€",
-                "stock" => "69",
+                "stock" => "0",
             ),
 
             "Kimbap" => array(
                 "prix" => "15€",
-                "stock" => "78",
+                "stock" => "0",
             ),
 
             "Mandu" => array(
                 "prix" => "7€",
-                "stock" => "89",
+                "stock" => "0",
             ),
         ),
 
         "dessert" => array(
             "Gyeongdan" => array(
                 "prix" => "15€",
-                "stock" => "6",
+                "stock" => "0",
             ),
 
             "Hotteok" => array(
                 "prix" => "10€",
-                "stock" => "14",
+                "stock" => "0",
             ),
 
             "hodu-gwaja" => array(
                 "prix" => "7€",
-                "stock" => "63",
+                "stock" => "0",
             ),
 
             "Gogumattang" => array(
                 "prix" => "10€",
-                "stock" => "52",
+                "stock" => "0",
             ),
 
             "Hwajeon" => array(
                 "prix" => "7€",
-                "stock" => "43",
+                "stock" => "0",
             ),
         ),
 
         "resto" => array(
             "Flavors" => array(
-                "prix" => "47€ à 112€",
-                "stock" => "142",
+                "prix" => "47€",
+                "stock" => "0",
             ),
 
             "Jangseng Geongangwon" => array(
-                "prix" => "11€ à 728€",
-                "stock" => "14",
+                "prix" => "11€",
+                "stock" => "0",
             ),
 
             "853" => array(
-                "prix" => "11€ à 22€",
-                "stock" => "68",
+                "prix" => "11€",
+                "stock" => "0",
             ),
 
             "Jihwaja" => array(
-                "prix" => "69€ à 142€",
-                "stock" => "6",
+                "prix" => "69€",
+                "stock" => "0",
             ),
 
             "Jungsik" => array(
-                "prix" => "47€ à 140€",
-                "stock" => "57",
+                "prix" => "47€",
+                "stock" => "0",
             ),
         ),
         
