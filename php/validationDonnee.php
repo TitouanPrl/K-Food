@@ -74,15 +74,15 @@
         mail(
             'pradaltito@cy-tech.fr',         /* Destinataire */
             'Résumé de votre demande de contact',       /* Sujet du mail */
-            'Date de la demande : ' + $date_contact + '\r\n'
-            + 'Nom : ' + $nom + '\r\n'
-            + 'Prénom : ' + $prenom + '\r\n'
-            + 'Mail : ' + $mail + '\r\n'
-            + 'Genre : ' + $genre + '\r\n'
-            + 'Date de naissance : ' + $date_naissance + '\r\n'
-            + 'Fonction : ' + $fonction + '\r\n'
-            + 'Sujet de la demande : ' + $sujet + '\r\n'
-            + 'Contenu de la demande : ' + $contenu + '\r\n'
+            'Date de la demande : ' . $date_contact . '\r\n'
+            + 'Nom : ' . $nom . '\r\n'
+            + 'Prénom : ' . $prenom . '\r\n'
+            + 'Mail : ' . $mail . '\r\n'
+            + 'Genre : ' . $genre . '\r\n'
+            + 'Date de naissance : ' . $date_naissance . '\r\n'
+            + 'Fonction : ' . $fonction . '\r\n'
+            + 'Sujet de la demande : ' . $sujet . '\r\n'
+            + 'Contenu de la demande : ' . $contenu . '\r\n'
         );
     }
 
