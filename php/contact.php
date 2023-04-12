@@ -13,22 +13,22 @@
                     <div id="formG">
                         <fieldset>
                             <legend>Date du contact</legend>
-                            <input type="date" id="date_contact" name="date_contact" required> <br>
+                            <input type="date" id="date_contact" name="date_contact" value="<?php echo($_GET['date_contact']); ?>" required> <br>
                         </fieldset>
 
                         <fieldset>
                             <legend>Nom</legend>
-                            <input type="text" id="nom" name="nom" required pattern="[A-Z][A-Za-z]+"> <br>
+                            <input type="text" id="nom" name="nom" value="<?php echo($_GET['nom']); ?>" required pattern="[A-Z][A-Za-z]+"> <br>
                         </fieldset>
 
                         <fieldset>
                             <legend>Prénom</legend>
-                            <input type="text" id="prenom" name="prenom" required pattern="[A-Z][A-Za-z]+"> <br>
+                            <input type="text" id="prenom" name="prenom" value="<?php echo($_GET['prenom']); ?>" required pattern="[A-Z][A-Za-z]+"> <br>
                         </fieldset>
 
                         <fieldset>
                             <legend>Mail</legend>
-                            <input type="email" id="mail" name="mail" required> <br>
+                            <input type="email" id="mail" name="mail" value="<?php echo($_GET['mail']); ?>" required> <br>
                         </fieldset>
 
                         <fieldset>
@@ -48,13 +48,13 @@
 
                         <fieldset>
                             <legend>Date de naissance</legend>
-                            <input type="date" id="date_naissance" name="date_naissance" required> <br>
+                            <input type="date" id="date_naissance" name="date_naissance" value="<?php echo($_GET['date_naissance']); ?>" required> <br>
                         </fieldset>
 
                         <fieldset>
                             <legend>Qui êtes vous ?</legend>
                             <select name="fonction" id="fonction" required>
-                                <option value="">--Choisissez votre état--</option>
+                                <option value=""> <?php echo($_GET['fonction']); ?></option>
                                 <option value="touriste">Touriste</option>
                                 <option value="local">Local</option>
                             </select>
@@ -63,12 +63,12 @@
 
                         <fieldset>
                             <legend>Sujet de la demande</legend>
-                            <input type="text" id="sujet" name="sujet" required pattern="[A-Za-z ]+"> <br>
+                            <input type="text" id="sujet" name="sujet" value="<?php echo($_GET['sujet']); ?>" required pattern="[A-Za-z ]+"> <br>
                         </fieldset>
 
                         <fieldset id="field_contenu">
                             <legend>Contenu</legend>
-                            <textarea id="contenu" name="contenu" required pattern="[A-Za-z ]+"></textarea>
+                            <textarea id="contenu" name="contenu" value="<?php echo($_GET['contenu']); ?>" required pattern="[A-Za-z ]+"></textarea>
                         </fieldset>
                     </div>
                 </div>
