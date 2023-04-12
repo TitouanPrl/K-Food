@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- On définit la liste des users -->
+<userList>
+
+    <user>
+        <userLogin>Titouan</userLogin>
+        <userMdp>19</userMdp>
+        <connect>false</connect>
+    </user>
+
+    <user>
+        <userLogin>Achille</userLogin>
+        <userMdp>Coree</userMdp>
+        <connect>false</connect>
+    </user>
+
+    <user>
+        <userLogin>Paularis</userLogin>
+        <userMdp>Paulairs</userMdp>
+        <connect>false</connect>
+    </user>
+
+    <user>
+        <userLogin>Yan</userLogin>
+        <userMdp>Coupole</userMdp>
+        <connect>false</connect>
+    </user>
+
+    <user>
+        <userLogin>Nico</userLogin>
+        <userMdp>GoatSis</userMdp>
+        <connect>false</connect>
+    </user>
+
+</userList>
