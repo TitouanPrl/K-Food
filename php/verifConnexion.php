@@ -12,13 +12,10 @@ if (!isset($_SESSION["login"])){
 }
 
 //PARTIE VERIFICATION IDENTITE
-$file = "../infos/user.json";
+$file = "../infos/user.xml";
 
 /* On met le contenu du fichier dans une chaine */
-$data = file_get_contents($file);
-
-/* On le décode */
-$obj = json_decode($data,true);
+$data = simplexml_load_file($file);
 
 
 /* Si le fichier n'existe pas on renvoit une erreur */
@@ -29,25 +26,35 @@ if (!filesize($file)) {
 
 /* Sinon on vérifie que l'utilisateur existe dans le fichier */
 else {
-  foreach($obj['userList'] as $current) {
+
+  $_SESSION['i'] = 0;
+
+  foreach($data as $user) {
 
     /* On écrit les var dans la session */
-    $_SESSION['login1'] = $current['userLogin'];
-    $_SESSION['mdp1'] = $current['userMdp'];
+    $_SESSION['login1'] = $user->userLogin;
+    $_SESSION['mdp1'] = $user->userMdp;
 
     /* Si les infos de connexion correspondent on passe l'état à connecté et on redirige vers l'accueil */
     if ($_SESSION['login'] == $_SESSION['login1'] && $_SESSION['mdp'] == $_SESSION['mdp1']){
 
-      //$current['connect'] = 'true'; A REFAIRE
+      /* On change l'état de la connexion */
+      $data->user[$_SESSION['i']]->connect = 'true';
 
-      //$updFile = fopen("../infos/user.json", "r+");
-      //fwrite($updFile, json_encode($obj));
-      //fclose($file);
+      /* On convertit la chaine en format xml */
+      $data_xml = $data->asXML();
+      
+      /* On ouvre le fichier et on écrit le texte */
+      $updFile = fopen("../infos/user.xml", "w+");
+      fwrite($updFile, $data_xml);
+      fclose($updFile);
 
       header('Location: accueil.php'); 
 
       exit();
     }
+
+    $_SESSION['i']++;
   }
 
   /* Si les données de connexions ne correspondent pas on renvoi vers la connexion */
