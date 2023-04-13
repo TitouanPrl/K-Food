@@ -3,7 +3,7 @@ session_start();
 
 /* On vérifie qu'un mdp a bien été rentré (évite qu'on dodge la page de connexion) */
 if (!isset($_SESSION["login"])){
-    header('Location:connexion.php');
+    header('Location:connexion.php?error=1');
     exit();
 }
 

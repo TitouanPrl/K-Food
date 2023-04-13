@@ -32,6 +32,24 @@ session_start();
 
   <main>
     <article>
+
+      <?php
+      /* Envoie un message correspondant à l'erreur de manipulation */
+      switch ($_GET['error']) {
+        case '1':
+          echo "<p id='notif'>Il semblerait que vous n'ayez pas rentré vos identifiants</p>";
+          break;
+          
+        case '2':
+          echo "<p id='notif'>Il semblerait qu'il y ait une erreur dans vos identifiants</ps>";
+          break;
+
+        default:
+          break;
+      }
+
+      ?>
+
       <h2>Connexion</h2>
 
       <form action="verifConnexion.php" method="POST">

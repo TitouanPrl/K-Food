@@ -7,7 +7,7 @@ $_SESSION['mdp'] = $_POST['mdp'];
 
 /* On vérifie qu'un mdp a bien été rentré (évite qu'on dodge la page de connexion) */
 if (!isset($_SESSION["login"])){
-  header('Location:connexion.php');
+  header('Location:connexion.php?error=1');
   exit();
 }
 
@@ -20,7 +20,7 @@ $data = simplexml_load_file($file);
 
 /* Si le fichier n'existe pas on renvoit une erreur */
 if (!filesize($file)) {     
-  echo "Le fichier user n'existe pas";
+  echo "Le fichier user n'existe pas, l'administrateur a fait un sale boulot, n'hésite pas à le critiquer à pradaltito@cy-tech.fr";
   exit();
 }
 
@@ -59,7 +59,7 @@ else {
 
   /* Si les données de connexions ne correspondent pas on renvoi vers la connexion */
   session_destroy(); 
-  header('Location: connexion.php');
+  header('Location: connexion.php?error=2');
 
 }
 
