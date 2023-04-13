@@ -32,8 +32,8 @@ else {
   foreach($data as $user) {
 
     /* On écrit les var dans la session */
-    $_SESSION['login1'] = $user->userLogin;
-    $_SESSION['mdp1'] = $user->userMdp;
+    $_SESSION['login1'] = (string) $user->userLogin;
+    $_SESSION['mdp1'] = (string) $user->userMdp;
 
     /* Si les infos de connexion correspondent on passe l'état à connecté et on redirige vers l'accueil */
     if ($_SESSION['login'] == $_SESSION['login1'] && $_SESSION['mdp'] == $_SESSION['mdp1']){
