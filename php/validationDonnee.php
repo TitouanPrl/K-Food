@@ -66,7 +66,7 @@
 
     /* Si les données ne sont pas valides on renvoit le form avec les erreurs à corriger */
     if ($valide = false) {
-        require "'contact.php?date_contact='$date_contact'?nom='$nom'?prenom='$prenom'?mail='$mail'?genre='$genre'?date_naissance='$date_naissance'?fonction='$fonction'?sujet='$sujet'?contenu='$contenu'";
+        require "'contact.php?date_contact='$date_contact'&nom='$nom'&prenom='$prenom'&mail='$mail'&genre='$genre'&date_naissance='$date_naissance'&fonction='$fonction'&sujet='$sujet'&contenu='$contenu'";
     }
 
     /* Si elles le sont, on envoie un mail avec un récap */
