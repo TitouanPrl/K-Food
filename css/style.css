@@ -15,11 +15,6 @@ p {
     text-align: center;
 }
 
-.cat_tab img {
-    width: 180px;
-    height: 150px;
-}
-
 /* Mise en forme tableau */
 
 .cat_tab {
@@ -82,6 +77,22 @@ textarea {
     transition: all 0.2s;
 }
 
+/* Bouton pour ajouter un item au panier */
+.img_ajout_panier {
+    height: 50px;
+    width: 50px;
+    filter : brightness(65%);
+
+    transition: all 0.5s ease-out;
+}
+
+.img_ajout_panier:hover {
+    cursor: pointer;
+    filter : brightness(100%);
+
+    transition: all 0.5s ease-out;
+}   
+
 /* Compteur */
 
 .compteur {
@@ -130,7 +141,6 @@ textarea {
 /* Mise en page du formulaire */
 
 #form {
-    display: inline-block;
     display: flex;
     height: 100%;
 }
@@ -186,7 +196,6 @@ input {
 fieldset {
     margin: 10px;
     width: 90%;
-
 }
 
 /* Définition des deux colonnes du form */
@@ -234,6 +243,9 @@ label {
 /* Zoom image */
 
 .img_produit {
+    width: 180px;
+    height: 150px;
+
     transition: all 0.2s;
     border: 3px solid #fe4415;
 }
@@ -268,6 +280,30 @@ label {
     transition: all 0.2s;
 }
 
+/* Mise en forme du panier */
+#panier {
+    width: 10%;
+    text-align: center;
+
+    background-color: #2C2F33;
+    border: 3px solid #fe4415;
+    color: white;
+
+    position: fixed;
+    margin-right: 2%;
+    right: 0%;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#icon_panier {
+    width: 100px;
+    height: 100px;
+    margin: 20%;
+    margin-top: 0%;
+}
+
 
 /* Template page */
 
@@ -284,12 +320,14 @@ html {
 main {
     width: 60%;
     margin: auto;
+
+    border: 3px solid #fe4415;
+    color: white;
     background-color: #2C2F33;
+    
     padding: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
-    border: 3px solid #fe4415;
-    color: white;
 }
 
 button {

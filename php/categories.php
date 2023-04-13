@@ -4,6 +4,8 @@ session_start();
 /* On inclut le header */
 require 'header.php';
 
+/* On inclut le panier */
+require 'gestionPanier.php';
 
 /* On lit la catégorie demandée */
 $cat = $_GET['cat'];
@@ -83,7 +85,7 @@ switch ($cat) {
 
 
 /* On définit le compteur */
-$i = 0;
+$cpt = 0;
 
 /* Affichage du corps de la page en fonction de la catégorie choisie */
 foreach ($obj[$cat] as $current) {
@@ -95,15 +97,15 @@ foreach ($obj[$cat] as $current) {
                     </td>
                     <td>
                         <div class="compteur">
-                            <button class="moins" onclick="suprCpt(' . $i . ')">-</button>
+                            <button class="moins" onclick="suprCpt(' . $cpt . ')">-</button>
                             <p class="AffCompteur">0</p>
-                            <button class="plus" onclick="addCpt(' . $i . ')">+</button>
+                            <button class="plus" onclick="addCpt(' . $cpt . ')">+</button>
                         </div>
-                        <button onclick="ajouter()">Reserver</button>
+                        <img class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image" onclick="ajouter()">
                     </td>
                 </tr>');
 
-    $i++;
+    $cpt++;
 }
 
 /* Affichage du bouton pour cacher les stocks */
@@ -114,8 +116,6 @@ echo ('</tbody>
         
     </article>
 </main>');
-
-
 
 
 echo ('<!-- FOOTER -->');

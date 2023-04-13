@@ -3,6 +3,7 @@
 ### Table des matières
 1. [Lancer le serveur](#serveur)
 2. [Ouvrir le site](#site)
+2. [Se connecter](#connexion)
 
 #### Lancer le serveur
 ***
@@ -18,6 +19,10 @@ Pour ouvrir le site :
 - Ouvrir votre navigateur 
 - Entrer http://localhost:8080/php/index.php dans la barre d'adresse
 ```
+
+#### Se connecter
+***
+Rentrez un des identifiants se trouvant dans le fichier /infos/user.xml
 
 ### Crédits
 ***
