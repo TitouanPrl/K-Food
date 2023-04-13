@@ -5,7 +5,7 @@
     <user>
         <userLogin>Titouan</userLogin>
         <userMdp>19</userMdp>
-        <connect>false</connect>
+        <connect>true</connect>
     </user>
 
     <user>

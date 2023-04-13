@@ -94,11 +94,20 @@ echo ('<div id="panier">
 ');
 
 /* On affiche chaque élément non nul du panier */
-foreach ($_SESSION["Panier"] as $current) {
-    echo ('
-    ');
+foreach ($_SESSION["Panier"] as $cat) {
+
+    foreach ($cat as $current) {
+
+        /* Si la quantité commandée d'un objet n'est pas nulle, on l'affiche */
+        if ($current["stock"] != 0) {
+            echo (' <div class="prod_panier">
+                   <p class="nom_prod_panier">' . $current . '</p>
+                   <p class="quant_prod_panier">' . $current["stock"] . '</p>
+                   <p class="prix_prod_panier">' . $current["stock"] * $current["prix"] . '</p>
+                </div>
+                   ');
+        }
+    }
 }
 
 echo ('</div>');
-
-?>
