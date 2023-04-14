@@ -90,7 +90,8 @@ $cpt = 0;
 foreach ($obj[$cat] as $current) {
     echo ('<tr>
                     <td><img class="img_produit" src="' . $current['img'] . '" alt="I am an image"></td>
-                    <td> ' . $current['nom_et_desc'] . ' </td>
+                    <td> ' . $current['nom'] . 
+                    $current['desc'] . ' </td>
                     <td> ' . $current['prix'] . '
                         <p class ="stock"><i>Stock : <span class="nb_stock">' . $current['stock'] . '</span></i></p>
                     </td>
@@ -99,8 +100,12 @@ foreach ($obj[$cat] as $current) {
                             <button class="moins" onclick="suprCpt(' . $cpt . ')">-</button>
                             <p class="AffCompteur">0</p>
                             <button class="plus" onclick="addCpt(' . $cpt . ')">+</button>
-                        </div>
-                        <img class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image">
+                        </div>');
+
+                        /* On récupère le nom du produit dans une var */
+                        preg_match('/<b>(.*?)<\/b>/s', $current['nom'], $nom_string);
+
+                        echo('<img class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image" onclick=" '.update_panier($cat, $nom_string[1]).'">
                     </td>
                 </tr>');
 
