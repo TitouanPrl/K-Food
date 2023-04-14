@@ -1,11 +1,10 @@
 <?php
-session_start();
 
 /* On inclut le header */
 require 'header.php';
 
 /* On inclut le panier */
-//require 'panier.php';
+require 'panier.php';
 
 /* On lit la catégorie demandée */
 $cat = $_GET['cat'];

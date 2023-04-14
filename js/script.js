@@ -1,9 +1,9 @@
 /* Incrémente le compteur */
 function addCpt(tmp) {
-    var cpt = document.getElementsByClassName("AffCompteur")[tmp].textContent;
+    var cpt = parseInt(document.getElementsByClassName("AffCompteur")[tmp].textContent);
     var butP = document.getElementsByClassName("plus")[tmp];
     var butM = document.getElementsByClassName("moins")[tmp];
-    var max = document.getElementsByClassName("nb_stock")[tmp].textContent;
+    var max = parseInt(document.getElementsByClassName("nb_stock")[tmp].textContent);
 
     if (cpt < max) {
     document.getElementsByClassName("AffCompteur")[tmp].textContent++;
@@ -21,10 +21,10 @@ function addCpt(tmp) {
 
 /* Décrémente le compteur */
 function suprCpt(tmp) {
-    var cpt = document.getElementsByClassName("AffCompteur")[tmp].textContent;
+    var cpt = parseInt(document.getElementsByClassName("AffCompteur")[tmp].textContent);
     var butP = document.getElementsByClassName("plus")[tmp];
     var butM = document.getElementsByClassName("moins")[tmp];
-    var max = document.getElementsByClassName("nb_stock")[tmp].textContent;
+    var max = parseInt(document.getElementsByClassName("nb_stock")[tmp].textContent);
 
 
     if (cpt > 0) {
