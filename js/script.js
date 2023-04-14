@@ -111,3 +111,8 @@ var sujet = document.getElementById("sujet");
     }
 
 }
+
+function ajouterPanier(cat, nom, affCpt) {
+    var funcPHP ="<?php update_panier(" + cat + ", " + nom + ", " + affCpt + "); ?>"
+document.write(funcPHP);
+}

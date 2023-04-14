@@ -142,14 +142,15 @@ echo ('<p id="prix_tot_prod_panier">Prix total : ' . $prix_tot . '€</p>
 </div>');
 
 /* Fonction pour update le contenu du panier */
-function update_panier($cat, $nom) {
+function update_panier($cat, $nom, $affCpt) {
 
     /* On initialise la var de stockage du compteur */
     $match = (string) null;
 
     /* On récupère le contenu du compteur et on l'insère dans le panier*/
-    preg_match('/<p class="AffCompteur">(.*?)<\/p>/s', $match);
+    preg_match('/<p class="AffCompteur">(.*?)<\/p>/s', $affCpt, $match);
 
+    echo("test : " . $_SESSION["Panier"][$cat]);
     $_SESSION["Panier"][$cat][$nom]["stock_panier"] = $match[1];
 
     /* On rafraichit la page */
