@@ -7,7 +7,7 @@ function addCpt(tmp) {
 
     if (cpt < max) {
     document.getElementsByClassName("AffCompteur")[tmp].textContent++;
-    }
+}
 
     if (cpt == max - 1) {
         butP.style.visibility = "hidden";
@@ -38,24 +38,6 @@ function suprCpt(tmp) {
     
     if (cpt == max) {
         butP.style.visibility = "visible";
-    }
-}
-
-/* Ajoute un produit au panier */
-function ajouter(cat, i) {
-    /* Cas où on a un plat */
-    if (cat == "plat") {
-        
-    }
-
-    /* Cas où on a un dessert */
-    else if (cat == "dessert") {
-        
-    }
-
-    /* Cas où on a un resto */
-    else if (cat == "resto") {
-        
     }
 }
 

@@ -5,37 +5,36 @@ if ($_SESSION["first_panier"] == false) {
 
     $_SESSION["first_panier"] = true;
 
-    /* On crée le tableau représentant le panier */
     $panier = array(
         "plat" => array(
             "Bibimbap" => array(
                 "nom" => "Bibimbap",
                 "prix" => "10€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Naengmyeon" => array(
                 "nom" => "Naengmyeon",
                 "prix" => "5€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Kimchi Jjigae" => array(
                 "nom" => "Kimchi Jjigae",
                 "prix" => "8€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Kimbap" => array(
                 "nom" => "Kimbap",
                 "prix" => "15€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Mandu" => array(
                 "nom" => "Mandu",
                 "prix" => "7€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
         ),
 
@@ -43,31 +42,31 @@ if ($_SESSION["first_panier"] == false) {
             "Gyeongdan" => array(
                 "nom" => "Gyeongdan",
                 "prix" => "15€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Hotteok" => array(
                 "nom" => "Hotteok",
                 "prix" => "10€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "hodu-gwaja" => array(
                 "nom" => "Hodu-gwaja",
                 "prix" => "7€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Gogumattang" => array(
                 "nom" => "Gogumattang",
                 "prix" => "10€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Hwajeon" => array(
                 "nom" => "Hwajeon",
                 "prix" => "7€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
         ),
 
@@ -75,31 +74,31 @@ if ($_SESSION["first_panier"] == false) {
             "Flavors" => array(
                 "nom" => "Flavors",
                 "prix" => "47€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Jangseng Geongangwon" => array(
                 "nom" => "Jangseng Geongangwon",
                 "prix" => "11€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "853" => array(
                 "nom" => "853",
                 "prix" => "11€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Jihwaja" => array(
                 "nom" => "Jihwaja",
                 "prix" => "69€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
 
             "Jungsik" => array(
                 "nom" => "Jungsik",
                 "prix" => "47€",
-                "stock" => "0",
+                "stock_panier" => "0",
             ),
         ),
 
@@ -123,11 +122,11 @@ foreach ($_SESSION["Panier"] as $cat) {
     foreach ($cat as $current) {
 
         /* Si la quantité commandée d'un objet n'est pas nulle, on l'affiche */
-        if ($current["stock"] != 0) {
+        if ($current["stock_panier"] != 0) {
             echo (' <div class="prod_panier">
                    <p class="nom_prod_panier">' . $current["nom"] . '</p>
-                   <p class="quant_prod_panier">' . $current["stock"] . '</p>
-                   <p class="prix_prod_panier">' . $current["stock"] * $current["prix"] . '</p>
+                   <p class="quant_prod_panier">' . $current["stock_panier"] . '</p>
+                   <p class="prix_prod_panier">' . $current["stock_panier"] * $current["prix"] . '</p>
                 </div>
             ');
         }
@@ -145,7 +144,7 @@ function update_panier($cat, $nom) {
     /* On récupère le contenu du compteur et on l'insère dans le panier*/
     preg_match('/<p class="AffCompteur">(.*?)<\/p>/s', $match);
 
-    $_SESSION["Panier"][$cat][$nom]["stock"] = $match[1];
+    $_SESSION["Panier"][$cat][$nom]["stock_panier"] = $match[1];
 
     /* On rafraichit la page */
     header("refresh");
