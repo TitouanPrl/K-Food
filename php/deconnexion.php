@@ -17,6 +17,8 @@ $updFile = fopen("../infos/user.xml", "w+");
 fwrite($updFile, $data_xml);
 fclose($updFile);
 
+/* On efface le panier */
+$_SESSION["first_panier"] = false;
 
 session_destroy();
 header('Location: connexion.php');

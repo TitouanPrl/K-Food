@@ -5,7 +5,7 @@ session_start();
 require 'header.php';
 
 /* On inclut le panier */
-require 'gestionPanier.php';
+require 'panier.php';
 
 /* On lit la catégorie demandée */
 $cat = $_GET['cat'];
@@ -101,7 +101,7 @@ foreach ($obj[$cat] as $current) {
                             <p class="AffCompteur">0</p>
                             <button class="plus" onclick="addCpt(' . $cpt . ')">+</button>
                         </div>
-                        <img class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image" onclick="ajouter()">
+                        <img class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image" onclick="' . update_panier($cat) . '">
                     </td>
                 </tr>');
 
