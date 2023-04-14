@@ -92,13 +92,13 @@ if ($_SESSION["first_panier"] == false) {
             "Jihwaja" => array(
                 "nom" => "Jihwaja",
                 "prix" => "69€",
-                "stock_panier" => "0",
+                "stock_panier" => "4",
             ),
 
             "Jungsik" => array(
                 "nom" => "Jungsik",
                 "prix" => "47€",
-                "stock_panier" => "0",
+                "stock_panier" => "5",
             ),
         ),
 
@@ -116,6 +116,9 @@ echo ('<div id="panier">
 <img id="icon_panier" src="../img/panier.png" alt="I am an image">
 ');
 
+/* On initialise la variable du prix total */
+$prix_tot = 0;
+
 /* On parcourt le panier */
 foreach ($_SESSION["Panier"] as $cat) {
 
@@ -124,16 +127,19 @@ foreach ($_SESSION["Panier"] as $cat) {
         /* Si la quantité commandée d'un objet n'est pas nulle, on l'affiche */
         if ($current["stock_panier"] != 0) {
             echo (' <div class="prod_panier">
-                   <p class="nom_prod_panier">' . $current["nom"] . '</p>
-                   <p class="quant_prod_panier">' . $current["stock_panier"] . '</p>
-                   <p class="prix_prod_panier">' . $current["stock_panier"] * $current["prix"] . '</p>
+                   <p class="nom_prod_panier"><b>' . $current["nom"] . '</b></p>
+                   <p class="quant_prod_panier"> Quantité : ' . $current["stock_panier"] . '</p>
+                   <p class="prix_prod_panier">Prix : ' . $current["stock_panier"] * $current["prix"] . '€</p>
                 </div>
             ');
+
+            $prix_tot += $current["stock_panier"] * $current["prix"];
         }
     }
 }
 
-echo ('</div>');
+echo ('<p id="prix_tot_prod_panier">Prix total : ' . $prix_tot . '€</p>
+</div>');
 
 /* Fonction pour update le contenu du panier */
 function update_panier($cat, $nom) {

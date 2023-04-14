@@ -93,6 +93,10 @@ textarea {
     transition: all 0.5s ease-out;
 }   
 
+.img_ajout_panier:active {
+    transform: translateY(5px);
+}
+
 /* Compteur */
 
 .compteur {
@@ -289,10 +293,12 @@ label {
     border: 3px solid #fe4415;
     color: white;
 
-    position: fixed;
+    position: relative;
+    float: right;
     margin-right: 2%;
     right: 0%;
     padding: 30px;
+    padding-bottom: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -302,6 +308,28 @@ label {
     height: 100px;
     margin: 20%;
     margin-top: 0%;
+}
+
+.prod_panier {
+    border: 2px solid #fe4415;
+    border-radius: 10px;
+
+    padding: 5%;
+    margin-bottom: 10%;
+}
+
+.nom_prod_panier {
+    padding: 10px;
+    border-radius: 10px;
+
+    background-color: #fe4415;
+    color: #2C2F33;
+    
+    font-size: large;
+}
+
+#prix_tot_prod_panier {
+    font-size: large;
 }
 
 
@@ -320,14 +348,13 @@ html {
 main {
     width: 60%;
     margin: auto;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     border: 3px solid #fe4415;
     color: white;
     background-color: #2C2F33;
-    
-    padding: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 button {
