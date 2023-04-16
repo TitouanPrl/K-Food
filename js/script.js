@@ -7,6 +7,7 @@ function addCpt(tmp) {
 
     if (cpt < max) {
     document.getElementsByClassName("AffCompteur")[tmp].textContent++;
+    document.getElementsByClassName("quant_produit")[tmp].value++;
 }
 
     if (cpt == max - 1) {
@@ -29,6 +30,7 @@ function suprCpt(tmp) {
 
     if (cpt > 0) {
         document.getElementsByClassName("AffCompteur")[tmp].textContent--;
+        document.getElementsByClassName("quant_produit")[tmp].value--;
     }
 
     if (cpt == 1) {
@@ -110,9 +112,4 @@ var sujet = document.getElementById("sujet");
         sujet.setCustomValidity("");
     }
 
-}
-
-function ajouterPanier(cat, nom, affCpt) {
-    var funcPHP ="<?php update_panier(" + cat + ", " + nom + ", " + affCpt + "); ?>"
-document.write(funcPHP);
 }

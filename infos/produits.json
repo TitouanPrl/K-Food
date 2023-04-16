@@ -3,7 +3,7 @@
 
         {
             "img": "../img/Bibimbap.jpg",
-            "nom": "<b>Bibimbap</b>",
+            "nom": "Bibimbap",
             "desc": " <br> Tout simplement du riz, qui est mélangé la plupart du temps avec des légumes et de la viande",
             "prix": "10€",
             "stock": "669"
@@ -11,7 +11,7 @@
 
         {
             "img": "../img/Naengmyeon.png",
-            "nom": "<b>Naengmyeon</b>",
+            "nom": "Naengmyeon",
             "desc": " <br> Le naengmyeon est cuisiné à base de nouilles servies froides !",
             "prix": "5€",
             "stock": "63"
@@ -19,7 +19,7 @@
 
         {
             "img": "../img/Kimchi Jjigae.jpg",
-            "nom": "<b>Kimchi Jjigae</b>",
+            "nom": "Kimchi Jjigae",
             "desc": " <br> Vous pouvez trouver à l’intérieur de ce plat de la viande, des fruits de mer, du tofu, des oignons ou encore de la pâte de haricots fermentés",
             "prix": "8€",
             "stock": "69"
@@ -27,7 +27,7 @@
 
         {
             "img": "../img/Kimbap.jpg",
-            "nom": "<b>Kimbap</b>",
+            "nom": "Kimbap",
             "desc": " <br> On retrouve du riz roulé dans une feuille d'algue séchée, avec en son centre de la garniture (produits cuits/légumes)",
             "prix": "15€",
             "stock": "78"
@@ -35,7 +35,7 @@
 
         {
             "img": "../img/Mandu.jpg",
-            "nom": "<b>Mandu</b>",
+            "nom": "Mandu",
             "desc": " <br> Les mandu sont en fait des ravioles coréennes",
             "prix": "7€",
             "stock": "89"
@@ -91,7 +91,7 @@
 
         {
             "img": "../img/Flavors.jpg",
-            "nom": "<b>Flavors</b>",
+            "nom": "Flavors",
             "desc": " <br> Fruits de mer & Poisson / Asiatique / Coréenne",
             "prix": "47€",
             "stock": "142"
@@ -99,7 +99,7 @@
 
         {
             "img": "../img/Jangseng Geongangwon.jpg",
-            "nom": "<b>Jangseng Geongangwon</b>",
+            "nom": "Jangseng Geongangwon",
             "desc": " <br> Coréenne",
             "prix": "11€",
             "stock": "14"
@@ -107,7 +107,7 @@
 
         {
             "img": "../img/853.jpg",
-            "nom": "<b>853</b>",
+            "nom": "853",
             "desc": " <br> Barbecue / Grillades / Asiatique / Coréenne",
             "prix": "11€",
             "stock": "68"
@@ -115,7 +115,7 @@
 
         {
             "img": "../img/Jihwaja.jpg",
-            "nom": "<b>Jihwaja</b>",
+            "nom": "Jihwaja",
             "desc": " <br> Coréenne / Végétariens bienvenus /Choix végétaliens",
             "prix": "69€",
             "stock": "6"
@@ -123,7 +123,7 @@
 
         {
             "img": "../img/Jungsik.jpg",
-            "nom": "<b>Jungsik</b>",
+            "nom": "Jungsik",
             "desc": " <br> Asiatique / Coréenne / Végétariens bienvenus",
             "prix": "47€",
             "stock": "57"

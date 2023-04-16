@@ -89,11 +89,11 @@ $cpt = 0;
 /* Affichage du corps de la page en fonction de la catégorie choisie */
 foreach ($obj[$cat] as $current) {
 
-    $affCompteur = '<p class="AffCompteur">0</p>';
+    $affCompteur = "<p class='AffCompteur'>0</p>";
 
-    echo ('<tr>
+    echo ('<tr> 
                     <td><img class="img_produit" src="' . $current['img'] . '" alt="I am an image"></td>
-                    <td> ' . $current['nom'] . 
+                    <td> <b>' . $current['nom'] . '</b>' . 
                     $current['desc'] . ' </td>
                     <td> ' . $current['prix'] . '
                         <p class ="stock"><i>Stock : <span class="nb_stock">' . $current['stock'] . '</span></i></p>
@@ -105,12 +105,16 @@ foreach ($obj[$cat] as $current) {
                             <button class="plus" onclick="addCpt(' . $cpt . ')">+</button>
                         </div>');
 
-                        /* On récupère le nom du produit dans une var */
-                        preg_match('/<b>(.*?)<\/b>/s', $current['nom'], $nom_string);
+                        /* On récupère le nom du produit dans une input */
+                        echo('<form action="gestionPanier.php" method="POST">
+                        <input name="nom_produit" type="hidden" value="' . $current["nom"] . '">
+                        <input name="nom_cat" type="hidden" value="' . $cat . '">
+                        <input class="quant_produit" name="quant_produit" type="hidden" value="0"> ');
 
-                        echo('<img class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image" onclick="ajouterPanier(' . $cat . ',' . $nom_string[1] . ',' . $affCompteur . 'b)">
-                    </td>
-                </tr>');
+                        echo('<input type="image" class="img_ajout_panier" src="../img/ajouter-au-chariot.png" alt="I am an image" Value ="submit">
+                        </td>
+                </form>
+            </tr>');
 
     $cpt++;
 }

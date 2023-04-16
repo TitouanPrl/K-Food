@@ -92,13 +92,13 @@ if ($_SESSION["first_panier"] == false) {
             "Jihwaja" => array(
                 "nom" => "Jihwaja",
                 "prix" => "69€",
-                "stock_panier" => "4",
+                "stock_panier" => "0",
             ),
 
             "Jungsik" => array(
                 "nom" => "Jungsik",
                 "prix" => "47€",
-                "stock_panier" => "5",
+                "stock_panier" => "0",
             ),
         ),
 
@@ -108,9 +108,6 @@ if ($_SESSION["first_panier"] == false) {
     $_SESSION["Panier"] = $panier;
 }
 
-
-
-
 /* Affichage du panier */
 echo ('<div id="panier">
 <img id="icon_panier" src="../img/panier.png" alt="I am an image">
@@ -118,6 +115,7 @@ echo ('<div id="panier">
 
 /* On initialise la variable du prix total */
 $prix_tot = 0;
+
 
 /* On parcourt le panier */
 foreach ($_SESSION["Panier"] as $cat) {
@@ -140,19 +138,3 @@ foreach ($_SESSION["Panier"] as $cat) {
 
 echo ('<p id="prix_tot_prod_panier">Prix total : ' . $prix_tot . '€</p>
 </div>');
-
-/* Fonction pour update le contenu du panier */
-function update_panier($cat, $nom, $affCpt) {
-
-    /* On initialise la var de stockage du compteur */
-    $match = (string) null;
-
-    /* On récupère le contenu du compteur et on l'insère dans le panier*/
-    preg_match('/<p class="AffCompteur">(.*?)<\/p>/s', $affCpt, $match);
-
-    echo("test : " . $_SESSION["Panier"][$cat]);
-    $_SESSION["Panier"][$cat][$nom]["stock_panier"] = $match[1];
-
-    /* On rafraichit la page */
-    header("refresh");
-};
