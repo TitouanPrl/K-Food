@@ -30,6 +30,10 @@
     $sujet = erase($_POST['sujet']);
     $contenu = erase($_POST['contenu']);
 
+    echo($date_contact);
+    echo($nom[0]);
+    echo($sujet);
+
     /* On vérifie que les var ne sont pas vides */
     if (empty($date_contact)
     || empty($nom)
@@ -46,7 +50,7 @@
 
     /* Match pattern nom et prenom */
     function patern_nom($data) {
-        if (!preg_match("[A-Z][A-Za-z]+", $data)) {
+        if (!ctype_upper($data[0] || !ctype_alpha($data))) {
             $valide = false;
         }
     }
@@ -56,7 +60,7 @@
 
     /* Match pattern sujet et contenu */
     function patern_content($data) {
-        if (!preg_match("[A-Za-z ]+", $data)) {
+        if (!ctype_alpha($data)) {
             $valide = false;
         }
     }
@@ -66,7 +70,7 @@
 
     /* Si les données ne sont pas valides on renvoit le form avec les erreurs à corriger */
     if ($valide = false) {
-        require "'contact.php?date_contact='$date_contact'&nom='$nom'&prenom='$prenom'&mail='$mail'&genre='$genre'&date_naissance='$date_naissance'&fonction='$fonction'&sujet='$sujet'&contenu='$contenu'";
+        header('Location:contact.php?date_contact=' .$date_contact .'&nom=' . $nom . '&prenom=' . $prenom . '&mail=' . $mail . '&genre=' . $genre . '&date_naissance=' . $date_naissance . '&fonction=' . $fonction . '&sujet=' . $sujet . '&contenu=' . $contenu);
     }
 
     /* Si elles le sont, on envoie un mail avec un récap */
@@ -74,16 +78,20 @@
         mail(
             'pradaltito@cy-tech.fr',         /* Destinataire */
             'Résumé de votre demande de contact',       /* Sujet du mail */
-            'Date de la demande : ' . $date_contact . '\r\n'
-            + 'Nom : ' . $nom . '\r\n'
-            + 'Prénom : ' . $prenom . '\r\n'
-            + 'Mail : ' . $mail . '\r\n'
-            + 'Genre : ' . $genre . '\r\n'
-            + 'Date de naissance : ' . $date_naissance . '\r\n'
-            + 'Fonction : ' . $fonction . '\r\n'
-            + 'Sujet de la demande : ' . $sujet . '\r\n'
-            + 'Contenu de la demande : ' . $contenu . '\r\n'
+            'Date de la demande : ' . $date_contact . '\r\n
+            Nom : ' . $nom . '\r\n
+            Prénom : ' . $prenom . '\r\n
+            Mail : ' . $mail . '\r\n
+            Genre : ' . $genre . '\r\n
+            Date de naissance : ' . $date_naissance . '\r\n
+            Fonction : ' . $fonction . '\r\n
+            Sujet de la demande : ' . $sujet . '\r\n
+            Contenu de la demande : ' . $contenu . '\r\n'
         );
+
+        /* Pour l'instant on redirige vers l'accueil */
+        //header('Location:accueil.php');
+
     }
 
 ?>

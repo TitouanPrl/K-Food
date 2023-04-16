@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 
 /* On initialise le panier à 0 lors du premier appel */
 if ($_SESSION["first_panier"] == false) {
@@ -126,12 +126,12 @@ foreach ($_SESSION["Panier"] as $cat) {
         if ($current["stock_panier"] != 0) {
             echo (' <div class="prod_panier">
                    <p class="nom_prod_panier"><b>' . $current["nom"] . '</b></p>
-                   <p class="quant_prod_panier"> Quantité : ' . $current["stock_panier"] . '</p>
-                   <p class="prix_prod_panier">Prix : ' . $current["stock_panier"] * $current["prix"] . '€</p>
+                   <p class="quant_prod_panier"> Quantité : ' . (int) $current["stock_panier"] . '</p>
+                   <p class="prix_prod_panier">Prix : ' . (int) $current["stock_panier"] * (int) $current["prix"] . '€</p>
                 </div>
             ');
 
-            $prix_tot += $current["stock_panier"] * $current["prix"];
+            $prix_tot += (int) $current["stock_panier"] * (int) $current["prix"];
         }
     }
 }
