@@ -90,7 +90,7 @@
         );
 
         /* Pour l'instant on redirige vers l'accueil */
-        //header('Location:accueil.php');
+        header('Location:accueil.php');
 
     }
 
