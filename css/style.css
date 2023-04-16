@@ -1,4 +1,7 @@
-/* Contenu */
+/* =================================== *
+*             CONTENU GLOBAL           *
+* ==================================== */
+
 
 h2 {
     text-align: center;
@@ -15,7 +18,10 @@ p {
     text-align: center;
 }
 
-/* Mise en forme tableau */
+
+/* ================================== *
+*       TABLEAU DES CATEGORIES        *
+* =================================== */
 
 .cat_tab {
     width: 80%;
@@ -46,12 +52,20 @@ p {
     color: #fff;
 }
 
+
+/* ================================== *
+*          BOITES DE DIALOGUES        *
+* =================================== */
+
 /* On empêhce l'étirement des box de dialogues */
 textarea {
     resize: none;
 }
 
-/* Bouton des stocks */
+
+/* ================================== *
+*          BOUTONS DES STOCKS         *
+* =================================== */
 
 #but_stock {
     margin-top: 2%;
@@ -77,7 +91,11 @@ textarea {
     transition: all 0.2s;
 }
 
-/* Bouton pour ajouter un item au panier */
+
+/* ================================== *
+*         BOUTON AJOUT PANIER         *
+* =================================== */
+
 .img_ajout_panier {
     height: 50px;
     width: 50px;
@@ -97,7 +115,10 @@ textarea {
     transform: translateY(5px);
 }
 
-/* Compteur */
+
+/* ================================== *
+* COMPTEUR D'OBJETS EN COURS D'ACHAT  *
+* =================================== */
 
 .compteur {
     display: inline-block;
@@ -142,7 +163,10 @@ textarea {
     padding: 5px;
 }
 
-/* Mise en page du formulaire */
+
+/* ================================== *
+*       FORMULAIRE DE CONTACT         *
+* =================================== */
 
 #form {
     display: flex;
@@ -244,7 +268,10 @@ label {
     resize: none;
 }
 
-/* Zoom image */
+
+/* ================================== *
+*         ZOOM IMAGES PRODUITS        *
+* =================================== */
 
 .img_produit {
     width: 180px;
@@ -262,7 +289,11 @@ label {
     transition: all 0.2s;
 }
 
-/* Mise en forme du bouton de déconnexion */
+
+/* ================================== *
+*          BOUTON DECONNEXION         *
+* =================================== */
+
 #deco {
     width: 10%;
     padding: 10px;
@@ -284,7 +315,11 @@ label {
     transition: all 0.2s;
 }
 
-/* Mise en forme du panier */
+
+/* ================================== *
+*               PANIER                *
+* =================================== */
+
 #panier {
     width: 10%;
     text-align: center;
@@ -333,7 +368,9 @@ label {
 }
 
 
-/* Template page */
+/* ================================== *
+*       MISE EN FORME GENERALE        *
+* =================================== */
 
 html {
     background-image: url("../img/food_bg.jpg");
@@ -365,7 +402,10 @@ button:active {
     transform: translateY(2px);
 }
 
-/* Template header & footer */
+
+/* ================================== *
+*           HEADER & FOOTER           *
+* =================================== */
 
 header,
 footer {
@@ -400,7 +440,6 @@ footer {
 }
 
 /* Lien survolé */
-
 #liens a:hover {
     color: white;
 
