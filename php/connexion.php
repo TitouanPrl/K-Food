@@ -27,12 +27,13 @@ session_start();
     <img id="logo" src="../img/korean_food.png" alt="logo">
 
     <?php
-      /* Envoie un message correspondant à l'erreur de manipulation */
+    /* Envoie un message correspondant à l'erreur de manipulation */
+    if (isset($_GET['error'])) {
       switch ($_GET['error']) {
         case '1':
           echo "<p id='notif'>Il semblerait que vous n'ayez pas rentré vos identifiants</p>";
           break;
-          
+
         case '2':
           echo "<p id='notif'>Il semblerait qu'il y ait une erreur dans vos identifiants</p>";
           break;
@@ -40,8 +41,9 @@ session_start();
         default:
           break;
       }
+    }
 
-      ?>
+    ?>
 
   </header>
 
