@@ -9,41 +9,37 @@
             </h2>
 
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-                lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
-                viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
-                et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
-                congue enim, ut porta lorem lacinia consectetur.
+                Imaginons que vous soyez étudiant en école d'ingénieur. Un séjour à l'étranger est imposé afin de satisfaire les critères
+                de la CTI. La Corée fait partie des destinations proposées ! C'est l'occasion de s'ouvrir à une toute autre culture 
+                que celle occidentale et de découvrir une nouvelle manière de manger. Souhaitant y faire un semestre, j'ai donc decidé
+                de me renseigner sur ce pays et de vous partager mes découvertes.
             </p>
 
-            <h3>Subsection</h3>
+            <h3>La gastronomie en Asie</h3>
 
             <p>
-                Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-                Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-            </p>
-
-            <p>
-                Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-                dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-                Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
-            </p>
-
-            <h3>Another subsection</h3>
-
-            <p>
-                Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-                soclis natoque penatibus et manis dis parturient montes, nascetur
-                ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-                facilisis semper ac in est.
+            La cuisine asiatique regroupe l'ensemble des styles gastronomiques des pays d'Asie avec leur propres spécificités. 
+            Issu d'une identité commune, notamment par l'utilisation d'aliments de base comme le riz et le mode de cuisson, 
+            elles ont chacune leur spécificité locale.
             </p>
 
             <p>
-                Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-                tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-                ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-                diam iaculis velit, is fringille sem nunc vet mi.
+            Dans le langage courant néanmoins l'expression cuisine asiatique a tendance à désigner spécifiquement 
+            la cuisine des pays d'Asie de l'Est et d'Asie du Sud-Est. 
+            </p>
+
+            <h3>La gastronomie Coréenne</h3>
+
+            <p>
+            La Corée est une région reconnue pour la variété et la qualité de sa cuisine. 
+            Ses grands classiques ne sauraient éclipser un répertoire d'une grande variété. 
+            Cette cuisine se distingue de celles des pays voisins, notamment le Japon et la Chine.
+            </p>
+
+            <p>
+            La cuisine coréenne utilise beaucoup de piment, et le sésame, sous forme d'huile et de graines, 
+            y est une quasi constante, de même que l'ail, ainsi qu'une grande variété de légumes, fruits de mer, 
+            légumes sauvages, etc.
             </p>
         </article>
     </main>
