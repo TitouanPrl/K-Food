@@ -21,5 +21,6 @@ fclose($updFile);
 $_SESSION["first_panier"] = false;
 
 session_destroy();
+mysqli_close($_SESSION["bdd"]);
 header('Location: connexion.php');
 exit();
