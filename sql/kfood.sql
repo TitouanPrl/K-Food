@@ -3,7 +3,7 @@ CREATE DATABASE KFood;
 USE KFood;
 
 CREATE TABLE Client(
-    idClient INT PRIMARY KEY,
+    idClient INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     login VARCHAR(30),
     mdp VARCHAR(30),
     connect BOOLEAN
