@@ -17,7 +17,7 @@
     <user>
         <userLogin>Paularis</userLogin>
         <userMdp>Paularis</userMdp>
-        <connect>false</connect>
+        <connect>true</connect>
     </user>
 
     <user>
