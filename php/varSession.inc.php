@@ -1,7 +1,14 @@
 <? session_start();
 
     /* On crée le tableau des catégories */
-    $cat = array(
+    include("bdd.php");
+
+    Connexion();
+    recupPlats();
+    recupDesserts();
+    recupResto();
+
+   /* $cat = array(
         "plat" => array(
             "Bibimbap" => array(
                 "img" => "../img/Bibimbap.jpg",
@@ -98,10 +105,11 @@
             ),
         ),
         
-    );
+    );*/
 
     /* On le passe en variable de session */
-    $_SESSION["Categories"] = $cat;
+    //$_SESSION["Categories"] = $cat;
+    $_SESSION["Categories"] = $_SESSION["data"];
 
 
 ?>
