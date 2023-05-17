@@ -15,7 +15,7 @@ CREATE TABLE Plats(
     nom VARCHAR(30) PRIMARY KEY,
     descProd VARCHAR(200),
     prix VARCHAR(4),
-    stock INT CHECK (prix => 0)
+    stock INT CHECK (stock >= 0)
 );
 
 CREATE TABLE Desserts(
@@ -23,7 +23,7 @@ CREATE TABLE Desserts(
     nom VARCHAR(30) PRIMARY KEY,
     descProd VARCHAR(200),
     prix VARCHAR(4),
-    stock INT CHECK (prix => 0)
+    stock INT CHECK (stock >= 0)
 );
 
 CREATE TABLE Resto(
@@ -31,11 +31,11 @@ CREATE TABLE Resto(
     nom VARCHAR(30) PRIMARY KEY,
     descProd VARCHAR(200),
     prix VARCHAR(4),
-    stock INT CHECK (prix => 0)
+    stock INT CHECK (stock >= 0)
 );
 
 CREATE TABLE Panier(
     nom VARCHAR(40) PRIMARY KEY,
     prix VARCHAR(4),
-    quantite INT CHECK (prix => 0)
+    quantite INT CHECK (quantite >= 0)
 );
