@@ -1,8 +1,8 @@
 # README
 ## TP 4 de Dev Web : Le Catalogue
 ### Table des matières
-1. [Lancer le serveur](#initialiser-la-bdd)
-2. [Initialiser la BDD](#ouvrir-le-site)
+1. [Lancer le serveur](#lancer-le-serveur)
+2. [Initialiser la BDD](#initialiser-la-bdd)
 3. [Ouvrir le site](#ouvrir-le-site)
 4. [Se connecter](#se-connecter)
 5. [Fonctionnalités](#fonctionnalités)
