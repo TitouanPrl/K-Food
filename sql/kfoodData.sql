@@ -1,11 +1,11 @@
 USE KFood;
 
 /* On remplit la liste des clients */
-INSERT INTO Client VALUES (0, 'Titouan', '19', false, false);
-INSERT INTO Client VALUES (1, 'Achille', 'Coree', false, false);
-INSERT INTO Client VALUES (2, 'Paularis', 'Paularis', false, true);
-INSERT INTO Client VALUES (3, 'Yan', 'Coupole', false, false);
-INSERT INTO Client VALUES (4, 'Nico', 'GoatSis', false, false);
+INSERT INTO Client VALUES (0, 'Titouan', '$2y$10$aE68fuwppOIU/gmRDmlIOO929Q06bTA01IsjpnPSl6PjXyDteXzne', false, false);
+INSERT INTO Client VALUES (1, 'Achille', '$2y$10$8/1SqSr2QhwND5dYZCDKfOeRtqM6XzdavHnj16FC7zawOUFZO04nW', false, false);
+INSERT INTO Client VALUES (2, 'Paularis', '$2y$10$8ptZsY0Q3z1FFzQtcJa1meLZMIyxlYsrI2eyiyetBGVEIAL8UAYtK', false, true);
+INSERT INTO Client VALUES (3, 'Yan', '$2y$10$jHxmEh8RSmPBo3cMyHH0QuFgQrdZlTF7feIlbrFMXts1bFGG8.bwG', false, false);
+INSERT INTO Client VALUES (4, 'Nico', '$2y$10$LWuRwOxC5129mpMGtNRqR.7qb497x1W3GLY9YGbKHajknZzkzsFRq', false, false);
 
 /* On remplit la liste des plats */
 INSERT INTO Plats VALUES ("../img/Bibimbap.jpg", "Bibimbap", " <br> Tout simplement du riz, qui est mélangé la plupart du temps avec des légumes et de la viande", "10€", 669);
