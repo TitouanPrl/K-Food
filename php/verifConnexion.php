@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-include('bdd.php');
+/* On inclut les fonctions de manipulation de la BDD */
+include("../bdd/bdd.php");
 
 /* On écrit dans la session les variables rentrées */
 $_SESSION['login'] = $_POST['login'];
@@ -41,7 +42,7 @@ else {
       $user['connectID'] = 'true';
 
       /* On met en session l'id du client */
-      $_SESSION['ID'] = $_SESSION['data']['Clients']['idCLient'];
+      $_SESSION['ID'] = $_SESSION['data']['Clients']['idClient'];
 
       if ($user['adminID'] == true) {
         $_SESSION['admin'] = true;
@@ -51,6 +52,7 @@ else {
       }
 
       /* On update l'état des clients dans la BDD */
+      connecter($_SESSION['ID']);
 
       /* On dit que le panier n'est pas encore initialisé */
       $_SESSION["first_panier"] = false;

@@ -7,7 +7,7 @@ require 'header.php';
 require 'panier.php';
 
 /* On inclut les fonctions de manipulation de la BDD */
-include("bdd.php");
+include("../bdd/bdd.php");
 
 /* On injecte les champs de la BDD en session */
 Connexion();

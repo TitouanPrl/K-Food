@@ -1,10 +1,11 @@
 <?php
 session_start();
 
-/* On change l'état de la connexion */
-$data->user[$_SESSION['i']]->connect = 'false';
+/* On inclut les fonctions de manipulation de la BDD */
+include("../bdd/bdd.php");
 
 /* On update l'état des clients dans la BDD */
+deconnecter($_SESSION['ID']);
 
 /* On efface le panier */
 $_SESSION["first_panier"] = false;

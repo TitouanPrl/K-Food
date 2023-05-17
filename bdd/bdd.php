@@ -140,4 +140,34 @@ function recupAll() {
 
 }
 
+/* Passer l'état d'un client à connecté */
+function connecter($id) {
+
+    if( $_SESSION["bdd"] == NULL)
+        throw new Exception("La BDD n'existe pas");
+
+    $req = "UPDATE Client SET connectID = true WHERE idClient = '$id'";
+    $res = mysqli_query($_SESSION["bdd"], $req);
+
+    if ($res == false)
+        throw new Exception("Erreur dans la requête");
+
+    return (true);
+}
+
+/* Passer l'état d'un client à déconnecté */
+function deconnecter($id) {
+
+    if( $_SESSION["bdd"] == NULL)
+        throw new Exception("La BDD n'existe pas");
+
+    $req = "UPDATE Client SET connectID = false WHERE idClient = '$id'";
+    $res = mysqli_query($_SESSION["bdd"], $req);
+
+    if ($res == false)
+        throw new Exception("Erreur dans la requête");
+
+    return (true);
+}
+
 ?>
