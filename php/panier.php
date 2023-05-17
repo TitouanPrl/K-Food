@@ -34,4 +34,5 @@ foreach ($_SESSION["data"]['Panier'] as $current) {
 }
 
 echo ('<p id="prix_tot_prod_panier">Prix total : ' . $prix_tot . '€</p>
+<button id="but_paiement">Payer</button>
 </div>');

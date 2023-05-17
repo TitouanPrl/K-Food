@@ -32,8 +32,10 @@ p {
     border: 2px solid #382f2f;
     text-align: center;
     margin: auto;
-    background-color: #fe4415;
+    background-color: #2C2F33;
+    border-color: #2C2F33;
     color: white;
+    border-spacing : 20px;
 }
 
 .cat_tab td .stock {
@@ -48,8 +50,15 @@ p {
 
 .cat_tab thead,
 .cat_tab tfoot {
-    background-color: #333;
+    background-color: #2C2F33;
+    border-color: #2C2F33;
     color: #fff;
+}
+
+.separateur {
+    align: center;
+    width: 30%;
+    color: #fe4415;
 }
 
 
@@ -365,6 +374,35 @@ label {
 
 #prix_tot_prod_panier {
     font-size: large;
+}
+
+/* ================================== *
+*           BOUTON PAIEMENT           *
+* =================================== */
+
+#but_paiement {
+    margin-top: 2%;
+    margin-left: auto;
+    text-align: center;
+
+    background-color: #fe4415;
+    color: #2C2F33;
+    border-radius: 10px;
+    font-size: large;
+    text-decoration: none;
+    border: 3px solid #2C2F33;
+    padding: 10px;
+    width: 100%;
+
+    transition: all 0.2s;
+
+    display: block;
+}
+
+#but_paiement:hover {
+    color: #fff;
+    border: 3px solid #fff;
+    transition: all 0.2s;
 }
 
 
