@@ -42,7 +42,7 @@ else {
       $user['connectID'] = 'true';
 
       /* On met en session l'id du client */
-      $_SESSION['ID'] = $_SESSION['data']['Clients']['idClient'];
+      $_SESSION['ID'] = $user['idClient'];
 
       if ($user['adminID'] == true) {
         $_SESSION['admin'] = true;

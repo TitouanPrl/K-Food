@@ -143,14 +143,16 @@ function recupAll() {
 /* Passer l'état d'un client à connecté */
 function connecter($id) {
 
-    if( $_SESSION["bdd"] == NULL)
+    if ($_SESSION["bdd"] == NULL) {
         throw new Exception("La BDD n'existe pas");
+    }
 
     $req = "UPDATE Client SET connectID = true WHERE idClient = '$id'";
     $res = mysqli_query($_SESSION["bdd"], $req);
 
-    if ($res == false)
+    if ($res == false) {
         throw new Exception("Erreur dans la requête");
+    }
 
     return (true);
 }
@@ -158,14 +160,16 @@ function connecter($id) {
 /* Passer l'état d'un client à déconnecté */
 function deconnecter($id) {
 
-    if( $_SESSION["bdd"] == NULL)
+    if ($_SESSION["bdd"] == NULL) {
         throw new Exception("La BDD n'existe pas");
+    }
 
     $req = "UPDATE Client SET connectID = false WHERE idClient = '$id'";
     $res = mysqli_query($_SESSION["bdd"], $req);
 
-    if ($res == false)
+    if ($res == false) {
         throw new Exception("Erreur dans la requête");
+    }
 
     return (true);
 }
@@ -173,14 +177,21 @@ function deconnecter($id) {
 /* Met à jour un le stock d'un produit dans la BDD */
 function updStock($cat, $prod, $stock) {
 
-    if( $_SESSION["bdd"] == NULL)
+    if( $_SESSION["bdd"] == NULL) {
         throw new Exception("La BDD n'existe pas");
+    }
+
+    /* Si la quantité est négative alors il n'y a pas assez de stocks pour effecuter la commande */
+    if($stock < 0) {
+        throw new Exception(("Il n'y a pas assez de stock pour effectuer votre commande"));
+    }
 
     $req = "UPDATE $cat SET stock = $stock WHERE nom = '$prod'";
     $res = mysqli_query($_SESSION["bdd"], $req);
 
-    if ($res == false)
+    if ($res == false) {
         throw new Exception("Erreur dans la requête");
+    }
 
     return (true);
 }
@@ -188,14 +199,16 @@ function updStock($cat, $prod, $stock) {
 /* Met à jour un le panier dans la BDD */
 function updPanier($prod, $quantite) {
 
-    if( $_SESSION["bdd"] == NULL)
+    if( $_SESSION["bdd"] == NULL) {
         throw new Exception("La BDD n'existe pas");
+    }
 
     $req = "UPDATE Panier SET quantite = $quantite WHERE nom = '$prod'";
     $res = mysqli_query($_SESSION["bdd"], $req);
 
-    if ($res == false)
+    if ($res == false) {
         throw new Exception("Erreur dans la requête");
+    }
 
     return (true);
 }
