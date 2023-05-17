@@ -6,24 +6,16 @@ require 'header.php';
 /* On inclut le panier */
 require 'panier.php';
 
+/* On inclut les fonctions de manipulation de la BDD */
+include("bdd.php");
+
+/* On injecte les champs de la BDD en session */
+Connexion();
+recupAll();
+
 /* On lit la catégorie demandée */
 $cat = $_GET['cat'];
 
-/* On ouvre le fichier avec les produits */
-$file = "../infos/produits.json";
-
-/* On met le contenu du fichier dans une chaine */
-$data = file_get_contents($file);
-
-/* On le décode */
-$obj = json_decode($data, true);
-
-
-/* Si le fichier n'existe pas on renvoit une erreur */
-if (!filesize($file)) {
-    echo "Le fichier user n'existe pas";
-    exit();
-}
 
 /* Affichage de l'en-tête*/
 switch ($cat) {
@@ -87,14 +79,14 @@ switch ($cat) {
 $cpt = 0;
 
 /* Affichage du corps de la page en fonction de la catégorie choisie */
-foreach ($obj[$cat] as $current) {
+foreach ($_SESSION["data"][$cat] as $current) {
 
     $affCompteur = "<p class='AffCompteur'>0</p>";
 
     echo ('<tr> 
                     <td><img class="img_produit" src="' . $current['img'] . '" alt="I am an image"></td>
                     <td> <b>' . $current['nom'] . '</b>' . 
-                    $current['desc'] . ' </td>
+                    $current['descProd'] . ' </td>
                     <td> ' . $current['prix'] . '
                         <p class ="stock"><i>Stock : <span class="nb_stock">' . $current['stock'] . '</span></i></p>
                     </td>

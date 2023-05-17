@@ -65,7 +65,7 @@ function recupPlats() {
     }
 
     while ($act = mysqli_fetch_assoc($resPlats)) {
-        $_SESSION["data"]["Plats"][] = $act;
+        $_SESSION["data"]["plat"][] = $act;
     }
 }
 
@@ -85,7 +85,7 @@ function recupDesserts() {
     }
 
     while ($act = mysqli_fetch_assoc($resDesserts)) {
-        $_SESSION["data"]["Desserts"][] = $act;
+        $_SESSION["data"]["dessert"][] = $act;
     }
 }
 
@@ -105,7 +105,7 @@ function recupResto() {
     }
 
     while ($act = mysqli_fetch_assoc($resResto)) {
-        $_SESSION["data"]["Resto"][] = $act;
+        $_SESSION["data"]["resto"][] = $act;
     }
 }
 
@@ -139,13 +139,5 @@ function recupAll() {
     recupPanier();
 
 }
-
-Connexion();
-
-recupAll();
-
-var_dump($_SESSION["data"]);
-
-Deconnexion();
 
 ?>
