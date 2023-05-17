@@ -2,8 +2,10 @@
 ## TP 3 de Dev Web : Le Catalogue
 ### Table des matières
 1. [Lancer le serveur](#serveur)
-2. [Ouvrir le site](#site)
-2. [Se connecter](#connexion)
+2. [Initialiser la BDD](#bdd)
+3. [Ouvrir le site](#site)
+4. [Se connecter](#connexion)
+5. [Fonctionnalités](#fonction)
 
 #### Lancer le serveur
 ***
@@ -11,6 +13,17 @@ Pour lancer le serveur :
 ```sh   
 "php -S localhost:8080" dans le dossier src/ une fois l'archive extraite
 ```
+
+#### Initialiser la BDD
+***
+Pour créer la BDD et l'initialiser :
+```sh
+- Ouvrir http://localhost/phpmyadmin/
+- Rentrer les identifiants suivant : "utilisateur : root" et pas de mot de passe
+- Dans l'onglet "Importer" importer les fichiers kfood.sql puis kfoodData.sql
+```
+
+Si la connexion ne fonctionne pas, utilisez un compte SQL déjà présent sur votre machine.
 
 #### Ouvrir le site
 ***
@@ -22,7 +35,14 @@ Pour ouvrir le site :
 
 #### Se connecter
 ***
-Rentrez un des identifiants se trouvant dans le fichier /infos/user.xml
+Rentrez un des identifiants se trouvant dans la BDD.
+
+#### Fonctionnalités
+***
+- Se connecter en tant qu'administrateur : 
+    id : Paularis
+    mpd : Paularis
+- Ajouter des produits au panier via les boutons dédiés
 
 ### Crédits
 ***
