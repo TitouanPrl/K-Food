@@ -232,4 +232,21 @@ function getQuantite($cat, $prod) {
     return ($quant);
 }
 
+/* Réinitialise le panier dans la BDD */
+function resetPanier() {
+
+    if( $_SESSION["bdd"] == NULL) {
+        throw new Exception("La BDD n'existe pas");
+    }
+
+    $req = "UPDATE Panier SET quantite = 0";
+    $res = mysqli_query($_SESSION["bdd"], $req);
+
+    if ($res == false) {
+        throw new Exception("Erreur dans la requête");
+    }
+
+    return (true);
+}
+
 ?>
