@@ -5,7 +5,7 @@ USE KFood;
 CREATE TABLE Client(
     idClient INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     loginID VARCHAR(30),
-    mdp VARCHAR(30),
+    mdp VARCHAR(60),
     connectID BOOLEAN,
     adminID BOOLEAN
 );

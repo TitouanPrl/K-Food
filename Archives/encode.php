@@ -1,16 +1,16 @@
 <?php 
 
-echo password_hash("19", PASSWORD_DEFAULT);
-echo password_hash("Coree", PASSWORD_DEFAULT);
-echo password_hash("Paularis", PASSWORD_DEFAULT);
-echo password_hash("Coupole", PASSWORD_DEFAULT);
-echo password_hash("GoatSis", PASSWORD_DEFAULT);
+echo md5("19"); 
+echo md5("Coree");
+echo md5("Paularis");
+echo md5("Coupole");
+echo md5("GoatSis");
 
-/* 19 : $2y$10$aE68fuwppOIU/gmRDmlIOO929Q06bTA01IsjpnPSl6PjXyDteXzne
-Coree : $2y$10$8/1SqSr2QhwND5dYZCDKfOeRtqM6XzdavHnj16FC7zawOUFZO04nW
-Paularis : $2y$10$8ptZsY0Q3z1FFzQtcJa1meLZMIyxlYsrI2eyiyetBGVEIAL8UAYtK
-Coupole : $2y$10$jHxmEh8RSmPBo3cMyHH0QuFgQrdZlTF7feIlbrFMXts1bFGG8.bwG
-GoatSis : $2y$10$LWuRwOxC5129mpMGtNRqR.7qb497x1W3GLY9YGbKHajknZzkzsFRq
+/* 19 : 1f0e3dad99908345f7439f8ffabdffc4
+Coree : 14245d919092895628a9a07e3690dbed
+Paularis : f133ac4dce233e252cefa2d67369e622
+Coupole : fe9446d25159c43d10c3a60b122c771c
+GoatSis : 3ae7f3a97f45b4c0f0663e120a1ebef0
 */
 
 ?>
