@@ -35,7 +35,7 @@ CREATE TABLE Resto(
 );
 
 CREATE TABLE Panier(
-    nom VARCHAR(40) PRIMARY KEY,
+    nom VARCHAR(40),
     prix VARCHAR(4),
     quantite INT CHECK (quantite >= 0)
 );

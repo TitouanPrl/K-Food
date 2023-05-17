@@ -29,6 +29,7 @@ INSERT INTO Resto VALUES ("../img/Jihwaja.jpg", "Jihwaja", " <br> Coréenne / V�
 INSERT INTO Resto VALUES ("../img/Jungsik.jpg", "Jungsik", " <br> Asiatique / Coréenne / Végétariens bienvenus", "47€", 57);
 
 /* On remplit la liste des items possibles dans le panier */
+/* Panier user 0 */
 INSERT INTO Panier VALUES ("Bibimbap", "10€", 0);
 INSERT INTO Panier VALUES ("Naengmyeon", "5€", 0);
 INSERT INTO Panier VALUES ("Kimchi Jjigae", "8€", 0);
