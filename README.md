@@ -1,11 +1,11 @@
 # README
 ## TP 4 de Dev Web : Le Catalogue
 ### Table des matières
-1. [Lancer le serveur](#serveur)
-2. [Initialiser la BDD](#bdd)
-3. [Ouvrir le site](#site)
-4. [Se connecter](#connexion)
-5. [Fonctionnalités](#fonction)
+1. [Lancer le serveur](#initialiser-la-bdd)
+2. [Initialiser la BDD](#ouvrir-le-site)
+3. [Ouvrir le site](#ouvrir-le-site)
+4. [Se connecter](#se-connecter)
+5. [Fonctionnalités](#fonctionnalités)
 
 #### Lancer le serveur
 ***
@@ -35,7 +35,7 @@ Pour ouvrir le site :
 
 #### Se connecter
 ***
-Rentrez un des identifiants se trouvant dans la BDD.
+Rentrez un des identifiants se trouvant dans /Archives/user.xml
 
 #### Fonctionnalités
 ***
