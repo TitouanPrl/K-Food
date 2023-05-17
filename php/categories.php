@@ -6,9 +6,6 @@ require 'header.php';
 /* On inclut le panier */
 require 'panier.php';
 
-/* On inclut les fonctions de manipulation de la BDD */
-include("../bdd/bdd.php");
-
 /* On injecte les champs de la BDD en session */
 Connexion();
 recupAll();

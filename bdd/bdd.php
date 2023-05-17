@@ -170,4 +170,34 @@ function deconnecter($id) {
     return (true);
 }
 
+/* Met à jour un le stock d'un produit dans la BDD */
+function updStock($cat, $prod, $stock) {
+
+    if( $_SESSION["bdd"] == NULL)
+        throw new Exception("La BDD n'existe pas");
+
+    $req = "UPDATE $cat SET stock = $stock WHERE nom = '$prod'";
+    $res = mysqli_query($_SESSION["bdd"], $req);
+
+    if ($res == false)
+        throw new Exception("Erreur dans la requête");
+
+    return (true);
+}
+
+/* Met à jour un le panier dans la BDD */
+function updPanier($prod, $quantite) {
+
+    if( $_SESSION["bdd"] == NULL)
+        throw new Exception("La BDD n'existe pas");
+
+    $req = "UPDATE Panier SET quantite = $quantite WHERE nom = '$prod'";
+    $res = mysqli_query($_SESSION["bdd"], $req);
+
+    if ($res == false)
+        throw new Exception("Erreur dans la requête");
+
+    return (true);
+}
+
 ?>

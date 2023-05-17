@@ -4,6 +4,9 @@ session_start();
 /* On inclut les fonctions de manipulation de la BDD */
 include("../bdd/bdd.php");
 
+/* On établit le lien avec la BDD */
+connexion();
+
 /* On update l'état des clients dans la BDD */
 deconnecter($_SESSION['ID']);
 

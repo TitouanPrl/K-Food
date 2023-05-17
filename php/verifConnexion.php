@@ -54,9 +54,6 @@ else {
       /* On update l'état des clients dans la BDD */
       connecter($_SESSION['ID']);
 
-      /* On dit que le panier n'est pas encore initialisé */
-      $_SESSION["first_panier"] = false;
-
       /* On redirige vers l'accueil */
       header('Location: accueil.php'); 
 

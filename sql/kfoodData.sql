@@ -27,3 +27,20 @@ INSERT INTO Resto VALUES ("../img/Jangseng Geongangwon.jpg", "Jangseng Geongangw
 INSERT INTO Resto VALUES ("../img/853.jpg", "853", " <br> Barbecue / Grillades / Asiatique / Coréenne", "11€", 68);
 INSERT INTO Resto VALUES ("../img/Jihwaja.jpg", "Jihwaja", " <br> Coréenne / Végétariens bienvenus /Choix végétaliens", "69€", 6);
 INSERT INTO Resto VALUES ("../img/Jungsik.jpg", "Jungsik", " <br> Asiatique / Coréenne / Végétariens bienvenus", "47€", 57);
+
+/* On remplit la liste des items possibles dans le panier */
+INSERT INTO Panier VALUES ("Bibimbap", "10€", 0);
+INSERT INTO Panier VALUES ("Naengmyeon", "5€", 0);
+INSERT INTO Panier VALUES ("Kimchi Jjigae", "8€", 0);
+INSERT INTO Panier VALUES ("Kimbap", "15€", 0);
+INSERT INTO Panier VALUES ("Mandu", "7€", 0);
+INSERT INTO Panier VALUES ("Gyeongdan", "15€", 0);
+INSERT INTO Panier VALUES ("Hotteok", "10€", 0);
+INSERT INTO Panier VALUES ("Hodou gwaja", "7€", 0);
+INSERT INTO Panier VALUES ("Gogumattang", "10€", 0);
+INSERT INTO Panier VALUES ("Hwajeon", "7€", 0);
+INSERT INTO Panier VALUES ("Flavors", "47€", 0);
+INSERT INTO Panier VALUES ("Jangseng Geongangwon", "11€", 0);
+INSERT INTO Panier VALUES ("853", "11€", 0);
+INSERT INTO Panier VALUES ("Jihwaja", "69€", 0);
+INSERT INTO Panier VALUES ("Jungsik", "47€", 0);
