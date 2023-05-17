@@ -39,7 +39,7 @@ Rentrez un des identifiants se trouvant dans /Archives/user.xml
 
 #### Fonctionnalités
 ***
-- Se connecter en tant qu'administrateur : 
+- Se connecter en tant qu'administrateur :
     id : Paularis
     mpd : Paularis
 - Ajouter des produits au panier via les boutons dédiés
