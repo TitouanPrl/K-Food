@@ -35,25 +35,15 @@ else {
     $_SESSION['login1'] = $user['loginID'];
     $_SESSION['mdp1'] = $user['mdp'];
 
-    echo("OUI " . $_SESSION['mdp1']); 
-    echo("NON " . $_SESSION['mdp']); 
-    if (password_verify($_SESSION['mdp1'], $_SESSION['mdp'])) {
-      echo 'Password is valid!';
-  } else {
-      echo 'Invalid password. \n';
-      echo password_hash("Paularis", PASSWORD_DEFAULT);
-;
-  }
-
     /* Si les infos de connexion correspondent on passe l'état à connecté et on redirige vers l'accueil */
-    if ($_SESSION['login'] == $_SESSION['login1'] && password_verify($_SESSION['mdp1'], $_SESSION['mdp'])){
+    if ($_SESSION['login'] == $_SESSION['login1'] && md5($_SESSION['mdp']) == $_SESSION['mdp1']){
 
       /* On change l'état de la connexion */
       $user['connectID'] = 'true';
 
       /* On met en session l'id du client */
       $_SESSION['ID'] = $user['idClient'];
-
+      
       if ($user['adminID'] == true) {
         $_SESSION['admin'] = true;
       }
@@ -65,7 +55,7 @@ else {
       connecter($_SESSION['ID']);
 
       /* On redirige vers l'accueil */
-      //header('Location: accueil.php'); 
+      header('Location: accueil.php'); 
 
       exit();
     }
@@ -74,7 +64,7 @@ else {
 
   /* Si les données de connexions ne correspondent pas on renvoi vers la connexion */
   session_destroy(); 
-  //header('Location: connexion.php?error=2');
+  header('Location: connexion.php?error=2');
 
 }
 
