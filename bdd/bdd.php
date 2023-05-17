@@ -213,4 +213,23 @@ function updPanier($prod, $quantite) {
     return (true);
 }
 
+/* On prend la quantité d'un item dans la BDD */
+function getQuantite($cat, $prod) {
+
+    if( $_SESSION["bdd"] == NULL) {
+        throw new Exception("La BDD n'existe pas");
+    }
+
+    $req = "SELECT stock FROM $cat WHERE nom = '$prod'";
+    $res = mysqli_query($_SESSION["bdd"], $req);
+
+    if ($res == false) {
+        throw new Exception("Erreur dans la requête");
+    }
+
+    $quant = (int) mysqli_fetch_assoc($res)["stock"];
+
+    return ($quant);
+}
+
 ?>
