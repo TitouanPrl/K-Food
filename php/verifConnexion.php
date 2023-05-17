@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include('bdd.php');
+
 /* On écrit dans la session les variables rentrées */
 $_SESSION['login'] = $_POST['login'];
 $_SESSION['mdp'] = $_POST['mdp'];
@@ -11,43 +13,44 @@ if (!isset($_SESSION["login"])){
   exit();
 }
 
+
 //PARTIE VERIFICATION IDENTITE
-$file = "../infos/user.xml";
-
-/* On met le contenu du fichier dans une chaine */
-$data = simplexml_load_file($file);
-
+/* On lit la liste des users dans la BDD */
+Connexion();
+recupClient();
 
 /* Si le fichier n'existe pas on renvoit une erreur */
-if (!filesize($file)) {     
-  echo "Le fichier user n'existe pas, l'administrateur a fait un sale boulot, n'hésite pas à le critiquer à pradaltito@cy-tech.fr";
+if ($_SESSION['data']['Clients'] == NULL) {     
+  echo "La liste des users n'existe pas, l'administrateur a fait un sale boulot, n'hésite pas à le critiquer à pradaltito@cy-tech.fr";
   exit();
 }
 
 /* Sinon on vérifie que l'utilisateur existe dans le fichier */
 else {
 
-  $_SESSION['i'] = 0;
-
-  foreach($data as $user) {
+  foreach($_SESSION['data']['Clients'] as $user) {
 
     /* On écrit les var dans la session */
-    $_SESSION['login1'] = (string) $user->userLogin;
-    $_SESSION['mdp1'] = (string) $user->userMdp;
+    $_SESSION['login1'] = $user['loginID'];
+    $_SESSION['mdp1'] = $user['mdp'];
 
     /* Si les infos de connexion correspondent on passe l'état à connecté et on redirige vers l'accueil */
     if ($_SESSION['login'] == $_SESSION['login1'] && $_SESSION['mdp'] == $_SESSION['mdp1']){
 
       /* On change l'état de la connexion */
-      $data->user[$_SESSION['i']]->connect = 'true';
+      $user['connectID'] = 'true';
 
-      /* On convertit la chaine en format xml */
-      $data_xml = $data->asXML();
-      
-      /* On ouvre le fichier et on écrit le texte */
-      $updFile = fopen("../infos/user.xml", "w+");
-      fwrite($updFile, $data_xml);
-      fclose($updFile);
+      /* On met en session l'id du client */
+      $_SESSION['ID'] = $_SESSION['data']['Clients']['idCLient'];
+
+      if ($user['adminID'] == true) {
+        $_SESSION['admin'] = true;
+      }
+      else {
+        $_SESSION['admin'] = false;
+      }
+
+      /* On update l'état des clients dans la BDD */
 
       /* On dit que le panier n'est pas encore initialisé */
       $_SESSION["first_panier"] = false;
@@ -58,7 +61,6 @@ else {
       exit();
     }
 
-    $_SESSION['i']++;
   }
 
   /* Si les données de connexions ne correspondent pas on renvoi vers la connexion */

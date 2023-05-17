@@ -1,11 +1,11 @@
 USE KFood;
 
 /* On remplit la liste des clients */
-INSERT INTO Client VALUES (0, 'Titouan', '19', false);
-INSERT INTO Client VALUES (1, 'Achille', 'Coree', false);
-INSERT INTO Client VALUES (2, 'Paularis', 'Paularis', false);
-INSERT INTO Client VALUES (3, 'Yan', 'Coupole', false);
-INSERT INTO Client VALUES (4, 'Nico', 'GoatSis', false);
+INSERT INTO Client VALUES (0, 'Titouan', '19', false, false);
+INSERT INTO Client VALUES (1, 'Achille', 'Coree', false, false);
+INSERT INTO Client VALUES (2, 'Paularis', 'Paularis', false, true);
+INSERT INTO Client VALUES (3, 'Yan', 'Coupole', false, false);
+INSERT INTO Client VALUES (4, 'Nico', 'GoatSis', false, false);
 
 /* On remplit la liste des plats */
 INSERT INTO Plats VALUES ("../img/Bibimbap.jpg", "Bibimbap", " <br> Tout simplement du riz, qui est mélangé la plupart du temps avec des légumes et de la viande", "10€", 669);

@@ -6,7 +6,8 @@ CREATE TABLE Client(
     idClient INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     loginID VARCHAR(30),
     mdp VARCHAR(30),
-    connectID BOOLEAN
+    connectID BOOLEAN,
+    adminID BOOLEAN
 );
 
 CREATE TABLE Plats(

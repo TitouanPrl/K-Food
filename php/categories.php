@@ -111,13 +111,15 @@ foreach ($_SESSION["data"][$cat] as $current) {
     $cpt++;
 }
 
-/* Affichage du bouton pour cacher les stocks */
 echo ('</tbody>
-        </table>
+        </table>');
 
-        <button id="but_stock" onclick="toggleStock()">Afficher/Masquer les stocks</button>
+/* Affichage du bouton pour cacher les stocks si l'utilisateur est un admin */
+if($_SESSION['admin'] == true) {
+    echo('<button id="but_stock" onclick="toggleStock()">Afficher/Masquer les stocks</button>');
+}     
         
-    </article>
+echo('</article>
 </main>');
 
 
