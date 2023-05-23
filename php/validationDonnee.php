@@ -45,12 +45,14 @@
     || empty($sujet)
     || empty($contenu)) {
 
+       global $valide;
        $valide = false;
     }
 
     /* Match pattern nom et prenom */
     function patern_nom($data) {
-        if (!ctype_upper($data[0] || !ctype_alpha($data))) {
+        if (!ctype_upper($data[0]) || !ctype_alpha($data)) {
+            global $valide;
             $valide = false;
         }
     }
@@ -61,6 +63,7 @@
     /* Match pattern sujet et contenu */
     function patern_content($data) {
         if (!ctype_alpha($data)) {
+            global $valide;
             $valide = false;
         }
     }
@@ -69,12 +72,12 @@
     patern_content($contenu);
 
     /* Si les données ne sont pas valides on renvoit le form avec les erreurs à corriger */
-    if ($valide = false) {
+    if ($valide == false) {
         header('Location:contact.php?date_contact=' .$date_contact .'&nom=' . $nom . '&prenom=' . $prenom . '&mail=' . $mail . '&genre=' . $genre . '&date_naissance=' . $date_naissance . '&fonction=' . $fonction . '&sujet=' . $sujet . '&contenu=' . $contenu);
     }
 
     /* Si elles le sont, on envoie un mail avec un récap */
-    if ($valide = true) {
+    if ($valide == true) {
         mail(
             'pradaltito@cy-tech.fr',         /* Destinataire */
             'Résumé de votre demande de contact',       /* Sujet du mail */
